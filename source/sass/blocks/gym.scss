@@ -1,3 +1,18 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.gym__inner {
+  @include inner;
+}
+
+.gym__play {
+  width: 100px;
+  height: 100px;
+
+  background-color: transparent;
+  background-image: url("../img/button-play@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: none;
+}
