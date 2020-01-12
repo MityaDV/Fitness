@@ -1,7 +1,6 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-.trainer__inner {
-  @include inner;
+.button-slider__icon {
+  fill: none;
 }
-
