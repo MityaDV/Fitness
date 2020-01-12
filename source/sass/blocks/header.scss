@@ -4,20 +4,3 @@
 .header__inner {
   @include inner;
 }
-
-h1 {
-  @include heading_h1;
-}
-
-h2 {
-  @include heading_h2;
-}
-
-h3 {
-  @include heading_h3;
-}
-
-p {
-  @include indent_p;
-}
-

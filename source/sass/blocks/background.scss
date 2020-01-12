@@ -1,3 +1,10 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.background {
+  background-color: #f8f9fc;
+  background-image: url("../../img/bg-header-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

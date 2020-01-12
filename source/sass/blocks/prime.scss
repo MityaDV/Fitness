@@ -1,3 +1,7 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.prime__inner {
+  @include inner;
+}
+
