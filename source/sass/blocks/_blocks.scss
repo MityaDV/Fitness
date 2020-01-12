@@ -1,7 +1,19 @@
-@import "normalize";
-@import "mixins";
-@import "vars";
-@import "fonts";
-@import "layout";
-@import "typography";
+@import "background";
 @import "header";
+@import "prime";
+@import "gym";
+@import "subscription";
+@import "promo";
+@import "trainer";
+@import "advantage";
+@import "action";
+@import "recall";
+@import "contact";
+@import "footer";
+//
+@import "normalize";
+@import "layout";
+@import "fonts";
+@import "typography";
+@import "vars";
+@import "mixins";
