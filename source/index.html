@@ -436,11 +436,40 @@
 
     <section class="contact">
       <div class="contact__content">
-        <div class="contact__form">
-          <h2>Бесплатное занятие</h2>
+        <div class="contact__background-form">
+          <form action="#" class="form" method="GET">
+            <h2>Бесплатное занятие</h2>
+            <div class="form__group">
+              <input type="text" id="user-name" name="username" placeholder="Имя" required="required">
+              <label class="form__label" for="user-name"></label>
+              <input type="tel" id="user-phone" name="userphone"
+                pattern="" placeholder="Телефон"
+                required title="Формат телефона 8-800-555-55-55"> <!--заполнить pattern-->
+              <label class="form__label" for="user-phone"></label>
+            </div>
+            <button class="form__button btn btn--send" type="submit">Отправить</button>
+          </form>
         </div>
-        <div class="contact__item">
-          <h2>Контакты</h2>
+        <div class="contact__background-column">
+          <div class="contact__column">
+            <h2>Контакты</h2>
+            <ul class="contact__list">
+              <li class="contact__item">Адрес:</li>
+              <li class="contact__item">г. Омск, ул. 60 лет Октября, 7</li>
+              <li class="contact__item">График работы:</li>
+              <li class="contact__item">Пн-Вс: с 8:00 до 22:00</li>
+            </ul>
+            <ul class="contact__list">
+              <li class="contact__item">Телефон:</li>
+              <li class="contact__item">
+                <a href="tel:8-800-555-55-55" class="contact__link-phone">8-800-555-55-55</a>
+              </li>
+              <li class="contact__item">Email:</li>
+              <li class="contact__item">
+                <a href="mailto:omsk@supergym.ru" class="contact__link-email">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -1,2 +1,18 @@
 @import "mixins.scss";
 @import "vars.scss";
+
+.contact__content {
+  display: flex;
+}
+
+.contact__background-form {
+  flex-basis: 50%;
+
+  background-color: $color_blue_midnight;
+}
+
+.contact__background-column {
+  flex-basis: 50%;
+
+  background-color: $color_white;
+}
