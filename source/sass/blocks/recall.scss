@@ -1,2 +1,11 @@
 @import "mixins.scss";
 @import "vars.scss";
+
+.recall__inner {
+  @include inner;
+}
+
+.recall__icon {
+  fill: none;
+}
+
