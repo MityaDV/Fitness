@@ -1,1 +1,28 @@
-// mixins
+@mixin inner() {
+  @include screen_steps;
+
+  max-width: $width_desktop;
+  margin: 0 auto;
+
+  @media (max-width: $width_viewport_tablet) {
+    width: $width_tablet;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    width: $width_mobile;
+  }
+}
+
+@mixin screen_steps () {
+  @media (min-width: $width_viewport_desktop_l) and(max-width: $width_viewport_desktop) {
+    padding: 0;
+  }
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: $padding_tablet;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: $padding_mobile;
+  }
+}
