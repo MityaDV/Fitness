@@ -5,6 +5,31 @@
   @include inner;
 }
 
+.gym__content {
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_s;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    letter-spacing: 0.03em;
+  }
+
+  & p {
+    margin: 0;
+
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_p_desktop_xxl;
+  }
+
+  & p + p {
+    font-weight: $font_weight_light;
+    font-size: $font_size_p_desktop_xxs;
+  }
+}
+
 .gym__play {
   width: 100px;
   height: 100px;
