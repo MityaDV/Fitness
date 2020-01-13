@@ -3,4 +3,79 @@
 
 .trainer__inner {
   @include inner;
+
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_s;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+.slider-trainer__list {
+  @include list;
+}
+
+.slider-trainer__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 294px;
+
+  & > p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+  }
+}
+
+.slider-trainer__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 294px;
+
+  background-color: $color_blue_bali_hai;
+
+  & p {
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_h3_desktop_xxs;
+    color: $color_white;
+  }
+
+  & p + p {
+    font-weight: $font_weight_normal;
+    font-size: $font_size_p_desktop_xxs;
+    color: $color_blue_haze;
+  }
+
+  & ul {
+    @include list;
+
+    font-size: $font_size_p_desktop_xs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+  }
 }
