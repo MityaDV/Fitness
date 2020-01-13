@@ -3,4 +3,100 @@
 
 .action__inner {
   @include inner;
+
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_s;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+.action__list-year {
+  @include list;
+}
+
+.action__item-year {
+  &--color {
+    background-color: $color_red_torch;
+  }
+
+  & h3 {
+    @include heading_h3;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxxxxs;
+    line-height: $line_height_p_desktop_xxxxl;
+    color: $color_white;
+  }
+
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxl;
+    line-height: $line_height_p_desktop_xxxl;
+    color: $color_white;
+  }
+
+  & p + p {
+    font-weight: $font_weight_normal;
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_p_desktop_xl;
+  }
+}
+
+.action__link-year {
+  font-weight: $font_weight_bold;
+  font-size: $font_size_p_desktop_xs;
+  line-height: $line_height_p_desktop_xs;
+  color: $color_white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.action__list-extra {
+  @include list;
+}
+
+.action__item-extra {
+  & h3 {
+    @include heading_h3;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_h3_desktop_l;
+    line-height: $line_height_h3_desktop_l;
+    color: $color_blue_midnight_light;
+  }
+
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-size: $font_size_h3_desktop_l;
+    line-height: $line_height_p_desktop_l;
+    color: $color_blue_midnight_light;
+  }
+}
+
+.action__link {
+  font-weight: $font_weight_bold;
+  font-size: $font_size_p_desktop_s;
+  line-height: $line_height_p_desktop_xxs;
+  color: $color_blue_midnight_light;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
