@@ -1,6 +1,66 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.promo {
+  background-color: $color_red_torch;
+}
+
 .promo__inner {
   @include inner;
+}
+
+.promo__content {
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_l;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    color: $color_white;
+    letter-spacing: 0.03em;
+  }
+
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+  }
+}
+
+.promo__list-date {
+  @include list;
+
+  font-size: $font_size_p_desktop_xxxs;
+  line-height: $line_height_p_desktop_xxl;
+  color: $color_white;
+}
+
+.promo__item {
+  &--date {
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_l;
+  }
+
+  &--month {
+    font-size: $font_size_p_desktop_xs;
+  }
+
+  &--time {
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_l;
+  }
+}
+
+.promo__list-time {
+  @include list;
+
+  font-size: $font_size_p_desktop_xxxs;
+  line-height: $line_height_p_desktop_xxl;
+  color: $color_white;
 }
