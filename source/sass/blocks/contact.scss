@@ -16,3 +16,39 @@
 
   background-color: $color_white;
 }
+
+.contact__column {
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_s;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    letter-spacing: 0.03em;
+  }
+}
+
+.contact__list {
+  @include list;
+
+  line-height: $line_height_p_desktop_xxl;
+}
+
+.contact__item {
+  font-size: $font_size_p_desktop_xs;
+
+  &--title {
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxs;
+  }
+}
+
+.contact__link-email {
+  color: $color_blue_midnight;
+}
+
+.contact__link-phone {
+  color: $color_blue_midnight;
+}
