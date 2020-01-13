@@ -4,3 +4,49 @@
 .prime__inner {
   @include inner;
 }
+
+.prime__content {
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-size: $font_size_p_desktop_xl;
+    line-height: $line_height_p_desktop_xxxs;
+    font-family: $font_family_second_base;
+    color: $color_white;
+    letter-spacing: 0.03em;
+  }
+
+  & p + h1 {
+    @include heading_h1;
+
+    margin: 0;
+
+    font-size: $font_size_h1_desktop;
+    line-height: $line_height_h1_desktop;
+    font-family: $font_family_second_base;
+    color: $color_white;
+    letter-spacing: 0.03em;
+    text-shadow: 2px 0 #ffffff, 2px 2px #ffffff, 0 2px #ffffff, -2px 2px #ffffff, -2px 0 #ffffff, -2px -2px #ffffff, 0 -2px #ffffff, 2px -2px #ffffff;
+  }
+}
+
+.prime__list {
+  @include list;
+
+  font-size: $font_size_p_desktop_xs;
+  line-height: $line_height_p_desktop_xxl;
+  color: $color_white;
+}
+
+.prime__list-social {
+  @include list;
+}
+
+.prime__link-social {
+  font-size: $font_size_p_desktop_xs;
+  line-height: $line_height_p_desktop_xxs;
+  color: $color_white;
+  text-transform: uppercase;
+}

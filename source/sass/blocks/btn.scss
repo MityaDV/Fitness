@@ -1,2 +1,20 @@
 @import "mixins.scss";
 @import "vars.scss";
+
+.btn {
+  display: block;
+  width: 230px;
+  min-height: 57px;
+  padding: 10px;
+
+  font-weight: bold;
+  font-size: $font_size_p_desktop_s;
+  line-height: $line_height_p_desktop_xxs;
+  font-family: $font_family_base;
+  color: $color_white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  background: transparent;
+  border: 4px solid $color_white;
+}
