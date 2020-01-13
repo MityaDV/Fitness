@@ -3,4 +3,94 @@
 
 .advantage__inner {
   @include inner;
+
+  & h2 {
+    @include heading_h2;
+
+    margin: 0;
+
+    font-size: $font_size_h2_desktop_s;
+    line-height: $line_height_h2_desktop_s;
+    font-family: $font_family_second_base;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+.advantage__list {
+  @include list;
+}
+
+.advantage__item {
+  & h3 {
+    @include heading_h3;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_h3_desktop_xs;
+    line-height: $line_height_h3_desktop_xs;
+  }
+
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-weight: $font_weight_light;
+    font-size: $font_size_p_desktop_xxs;
+    line-height: $line_height_p_desktop_l;
+  }
+}
+
+.advantage__list-card {
+  @include list;
+}
+
+.advantage__item-card {
+  &--amount {
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxxl;
+    line-height: $line_height_p_desktop_xxl;
+  }
+
+  &--feature {
+    font-size: $font_size_p_desktop_xs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_blue_cerulean;
+  }
+}
+
+.advantage__card {
+  min-height: 240px;
+
+  background-color: $color_blue_midnight_light;
+
+  & p {
+    @include indent_p;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxxxl;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+  }
+
+  & h3 {
+    @include heading_h3;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_h3_desktop_l;
+    line-height: $line_height_h3_desktop_xxs;
+    color: $color_white;
+  }
+
+  & h3 + p {
+    font-weight: $font_weight_normal;
+    font-size: $font_size_p_desktop_xxs;
+  }
 }
