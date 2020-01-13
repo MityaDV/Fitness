@@ -37,4 +37,14 @@
     width: 343px;
     min-height: 67px;
   }
+
+  &--send {
+    width: 410px;
+    min-height: 52px;
+
+    font-size: $font_size_p_desktop_xs;
+    line-height: $line_height_p_desktop_xs;
+
+    border: 3px solid $color_white;
+  }
 }
