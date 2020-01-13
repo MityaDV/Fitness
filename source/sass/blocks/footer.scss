@@ -1,6 +1,31 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.footer {
+  background-color: $color_green_dark;
+}
+
 .footer__inner {
   @include inner;
 }
+
+.footer__logo-link {
+  font-weight: $font_weight_bold;
+  font-size: $font_size_p_desktop_xxxxxs;
+  line-height: $line_height_p_desktop_s;
+  font-family: $font_family_second_base;
+  color: $color_white;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.footer__navigation-link {
+  font-size: $font_size_p_desktop_xs;
+  line-height: $line_height_p_desktop_xs;
+  color: $color_white;
+}
+
+.footer__list-social {
+  @include list;
+}
+
