@@ -136,24 +136,26 @@
 
     <section class="subscription">
       <div class="subscription__inner">
-        <h2>Абонементы</h2>
-        <ul class="subscription__list">
-          <li class="subscription__item">
-            <button class="subscription__button subscription__button--active" type="button" aria-label="1 месяц" data-slide="slide-1">
-              1 месяц
-            </button>
-          </li>
-          <li class="subscription__item">
-            <button class="subscription__button" type="button" aria-label="6 месяцев" data-slide="slide-2">
-              6 месяцев
-            </button>
-          </li>
-          <li class="subscription__item">
-            <button class="subscription__button" type="button" aria-label="12 месяцев" data-slide="slide-3">
-              12 месяцев
-            </button>
-          </li>
-        </ul>
+        <div class="subscription__row">
+          <h2>Абонементы</h2>
+          <ul class="subscription__list">
+            <li class="subscription__item">
+              <button class="subscription__button subscription__button--active" type="button" aria-label="1 месяц">
+                1 месяц
+              </button>
+            </li>
+            <li class="subscription__item">
+              <button class="subscription__button" type="button" aria-label="6 месяцев">
+                6 месяцев
+              </button>
+            </li>
+            <li class="subscription__item">
+              <button class="subscription__button" type="button" aria-label="12 месяцев">
+                12 месяцев
+              </button>
+            </li>
+          </ul>
+        </div>
         <div class="subscription__content">
           <section class="subscription__card">
             <h3>С тренером</h3>
@@ -459,7 +461,8 @@
             <div class="form__group">
               <input type="text" id="user-name" name="username" placeholder="Имя" required="required">
               <label class="form__label" for="user-name"></label>
-              <input type="tel" id="user-phone" name="userphone" pattern="" placeholder="Телефон" required="" title="Формат телефона 8-800-555-55-55"> <!--заполнить pattern-->
+              <input type="tel" id="user-phone" name="userphone" pattern="" placeholder="Телефон" required="" title="Формат телефона 8-800-555-55-55">
+              <!--заполнить pattern-->
               <label class="form__label" for="user-phone"></label>
             </div>
             <button class="form__button btn btn--send" type="submit">Отправить</button>

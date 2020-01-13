@@ -18,6 +18,8 @@
   }
 
   & p {
+    @include indent_p;
+
     margin: 0;
 
     font-size: $font_size_p_desktop_xxxs;
