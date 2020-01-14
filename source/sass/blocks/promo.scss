@@ -1,15 +1,13 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-.promo {
-  background-color: $color_red_torch;
-}
-
 .promo__inner {
   @include inner;
 }
 
 .promo__content {
+  background-color: $color_red_torch;
+
   & h2 {
     @include heading_h2;
 

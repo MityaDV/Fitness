@@ -60,6 +60,10 @@
 
       border: 2px solid $color_white;
     }
+
+    @media (max-width: $width_viewport_mobile) {
+      width: 100%;
+    }
   }
 
   &--send {
