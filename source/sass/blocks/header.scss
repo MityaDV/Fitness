@@ -13,6 +13,10 @@
   color: $color_white;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+
+  @media (max-width: $width_viewport_tablet) {
+    font-size: $font_size_p_tablet_xxxxxxs;
+  }
 }
 
 .header__navigation-link {
@@ -23,4 +27,8 @@
   color: $color_white;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+
+  @media (max-width: $width_viewport_tablet) {
+    font-size: $font_size_p_tablet_xxxxxxs;
+  }
 }

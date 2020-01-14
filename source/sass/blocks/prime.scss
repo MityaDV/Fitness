@@ -16,6 +16,10 @@
     font-family: $font_family_second_base;
     color: $color_white;
     letter-spacing: 0.03em;
+
+    @media (max-width: $width_viewport_tablet) {
+      line-height: $line_height_p_tablet_xxxs;
+    }
   }
 
   & p + h1 {
@@ -42,6 +46,10 @@
 
 .prime__list-social {
   @include list;
+
+  @media (max-width: $width_viewport_tablet) {
+    display: none;
+  }
 }
 
 .prime__link-social {

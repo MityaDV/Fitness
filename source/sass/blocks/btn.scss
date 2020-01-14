@@ -18,6 +18,12 @@
   background: transparent;
   border: 4px solid $color_white;
 
+  &--buy {
+    @media (max-width: $width_viewport_tablet) {
+      width: 183px;
+    }
+  }
+
   &--subscription {
     display: flex;
     justify-content: center;
