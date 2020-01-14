@@ -20,6 +20,10 @@
     @media (max-width: $width_viewport_tablet) {
       line-height: $line_height_p_tablet_xxxs;
     }
+
+    @media (max-width: $width_viewport_mobile) {
+      font-size: $font_size_p_mobile_xxxxxxxs;
+    }
   }
 
   & p + h1 {

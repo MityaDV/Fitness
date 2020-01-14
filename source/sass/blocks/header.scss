@@ -17,6 +17,10 @@
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_p_tablet_xxxxxxs;
   }
+
+  @media (max-width: $width_viewport_mobile) {
+    font-size: $font_size_p_mobile_xxxxxs;
+  }
 }
 
 .header__navigation-link {
@@ -30,5 +34,9 @@
 
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_p_tablet_xxxxxxs;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    font-size: $font_size_p_mobile_xxxxxs;
   }
 }

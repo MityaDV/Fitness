@@ -3,6 +3,10 @@
 
 .contact__content {
   display: flex;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-direction: column;
+  }
 }
 
 .contact__background-form {
