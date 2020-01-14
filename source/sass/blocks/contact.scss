@@ -35,6 +35,10 @@
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_h2_tablet_s;
     }
+
+    @media (max-width: $width_viewport_mobile) {
+      font-size: $font_size_h2_mobile_s;
+    }
   }
 }
 
