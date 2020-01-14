@@ -34,6 +34,10 @@
     color: $color_blue_midnight;
 
     border: 2px solid $color_blue_midnight;
+
+    @media (max-width: $width_viewport_tablet) {
+      min-height: 64px;
+    }
   }
 
   &--promo {
