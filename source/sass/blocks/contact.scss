@@ -27,6 +27,10 @@
     line-height: $line_height_h2_desktop_s;
     font-family: $font_family_second_base;
     letter-spacing: 0.03em;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_h2_tablet_s;
+    }
   }
 }
 
@@ -39,9 +43,17 @@
 .contact__item {
   font-size: $font_size_p_desktop_xs;
 
+  @media (max-width: $width_viewport_tablet) {
+    font-size: $font_size_p_tablet_xxxxs;
+  }
+
   &--title {
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxs;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxxxs;
+    }
   }
 }
 
