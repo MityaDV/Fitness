@@ -15,6 +15,10 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_h2_tablet_s;
+    }
   }
 }
 
@@ -36,6 +40,11 @@
     font-size: $font_size_p_desktop_xxxxxxs;
     line-height: $line_height_p_desktop_xxxxl;
     color: $color_white;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxxxxxs;
+      line-height: $line_height_p_tablet_xxxxl;
+    }
   }
 
   & p {
@@ -47,6 +56,11 @@
     font-size: $font_size_p_desktop_xxxl;
     line-height: $line_height_p_desktop_xxxl;
     color: $color_white;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxl;
+      line-height: $line_height_p_tablet_xxxl;
+    }
   }
 
   & p + p {
@@ -79,6 +93,11 @@
     font-size: $font_size_h3_desktop_l;
     line-height: $line_height_h3_desktop_l;
     color: $color_blue_midnight_light;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_h3_tablet_l;
+      line-height: $line_height_h3_tablet_l;
+    }
   }
 
   & p {
@@ -86,9 +105,14 @@
 
     margin: 0;
 
-    font-size: $font_size_h3_desktop_l;
+    font-size: $font_size_p_desktop_xxxxxs;
     line-height: $line_height_p_desktop_l;
     color: $color_blue_midnight_light;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxs;
+      line-height: $line_height_p_tablet_l;
+    }
   }
 }
 
