@@ -3,8 +3,8 @@
 
 .background {
   background-color: #f8f9fc;
-  background-image: url("../../img/bg-header-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url("../img/man-desktop@1x.jpg"), url("../img/bg-header-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 300px center, center;
+  background-size: auto, cover;
 }

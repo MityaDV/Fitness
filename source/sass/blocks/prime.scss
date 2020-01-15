@@ -1,11 +1,24 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.prime {
+  padding: 90px 0;
+}
+
 .prime__inner {
   @include inner;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .prime__content {
+  display: flex;
+  flex-basis: 25%;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+
   & p {
     @include indent_p;
 
@@ -34,6 +47,7 @@
     font-size: $font_size_h1_desktop;
     line-height: $line_height_h1_desktop;
     font-family: $font_family_second_base;
+    text-align: end;
     color: $color_white;
     letter-spacing: 0.03em;
     text-shadow: 2px 0 #ffffff, 2px 2px #ffffff, 0 2px #ffffff, -2px 2px #ffffff, -2px 0 #ffffff, -2px -2px #ffffff, 0 -2px #ffffff, 2px -2px #ffffff;
@@ -43,6 +57,9 @@
 .prime__list {
   @include list;
 
+  align-self: flex-end;
+  margin-bottom: 90px;
+
   font-size: $font_size_p_desktop_xs;
   line-height: $line_height_p_desktop_xxl;
   color: $color_white;
@@ -50,6 +67,9 @@
 
 .prime__list-social {
   @include list;
+
+  align-self: flex-end;
+  margin: 0 0 0 auto;
 
   @media (max-width: $width_viewport_tablet) {
     display: none;

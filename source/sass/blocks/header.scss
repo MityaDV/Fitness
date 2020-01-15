@@ -1,8 +1,17 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.header {
+  padding: 30px 0;
+}
+
 .header__inner {
   @include inner;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__logo-link {
