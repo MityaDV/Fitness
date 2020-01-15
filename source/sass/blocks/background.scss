@@ -7,4 +7,12 @@
   background-repeat: no-repeat, no-repeat;
   background-position: right 300px center, center;
   background-size: auto, cover;
+
+  @media (max-width: $width_viewport_tablet) {
+    background-color: #f8f9fc;
+    background-image: url("../img/man-tablet@1x.jpg"), url("../img/bg-header-tablet@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40px center, center;
+    background-size: auto, cover;
+  }
 }
