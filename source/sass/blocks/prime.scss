@@ -3,6 +3,10 @@
 
 .prime {
   padding: 90px 0;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 40px 0 96px;
+  }
 }
 
 .prime__inner {
@@ -10,18 +14,13 @@
 
   display: flex;
   flex-wrap: wrap;
-}
-
-.prime__content {
-  display: flex;
-  flex-basis: 25%;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-
 
   & p {
     @include indent_p;
 
+    display: flex;
+    flex-basis: 34%;
+    justify-content: flex-end;
     margin: 0;
 
     font-size: $font_size_p_desktop_xl;
@@ -31,6 +30,8 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
+      flex-basis: 100%;
+
       line-height: $line_height_p_tablet_xxxs;
     }
 
@@ -38,10 +39,50 @@
       font-size: $font_size_p_mobile_xxxxxxxs;
     }
   }
+}
 
-  & p + h1 {
+.prime__row {
+  display: flex;
+  flex-basis: 100%;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 51%;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    flex-basis: 70%;
+  }
+
+  @media (max-width: 452px) {
+    flex-basis: 100%;
+  }
+
+  &--middle {
+    margin: 0 0 70px 0;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 60px 0;
+    }
+  }
+
+  &--buttom {
+    justify-content: space-between;
+
+    @media (max-width: $width_viewport_tablet) {
+      justify-content: flex-end;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      flex-basis: 100%;
+      justify-content: normal;
+    }
+  }
+
+  & h1 {
     @include heading_h1;
 
+    flex-basis: 26%;
     margin: 0;
 
     font-size: $font_size_h1_desktop;
@@ -51,25 +92,37 @@
     color: $color_white;
     letter-spacing: 0.03em;
     text-shadow: 2px 0 #ffffff, 2px 2px #ffffff, 0 2px #ffffff, -2px 2px #ffffff, -2px 0 #ffffff, -2px -2px #ffffff, 0 -2px #ffffff, 2px -2px #ffffff;
+
+    @media (max-width: $width_viewport_tablet) {
+      flex-basis: 36%;
+    }
   }
 }
 
 .prime__list {
   @include list;
 
+  display: flex;
+  flex-basis: 11%;
+  flex-direction: column;
+  align-items: flex-end;
   align-self: flex-end;
-  margin-bottom: 90px;
+  margin: 0 -30px 30px 0;
+  padding: 0;
 
   font-size: $font_size_p_desktop_xs;
   line-height: $line_height_p_desktop_xxl;
   color: $color_white;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 21%;
+    min-width: 113px;
+    margin: 0 -30px 15px 0;
+  }
 }
 
 .prime__list-social {
   @include list;
-
-  align-self: flex-end;
-  margin: 0 0 0 auto;
 
   @media (max-width: $width_viewport_tablet) {
     display: none;
@@ -81,4 +134,12 @@
   line-height: $line_height_p_desktop_xxs;
   color: $color_white;
   text-transform: uppercase;
+}
+
+.prime__button {
+  margin: 0 0 0 170px;
+
+  @media (max-width: $width_viewport_tablet) {
+    margin: 0;
+  }
 }

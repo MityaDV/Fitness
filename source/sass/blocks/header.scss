@@ -3,6 +3,10 @@
 
 .header {
   padding: 30px 0;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 40px 0 20px;
+  }
 }
 
 .header__inner {

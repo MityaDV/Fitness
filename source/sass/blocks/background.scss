@@ -15,4 +15,12 @@
     background-position: right 40px center, center;
     background-size: auto, cover;
   }
+
+  @media (max-width: $width_viewport_mobile) {
+    background-color: #f8f9fc;
+    background-image: url("../img/bg-header-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
