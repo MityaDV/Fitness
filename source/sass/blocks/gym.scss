@@ -1,15 +1,57 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.gym {
+  padding: 120px 0 210px;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 100px 0 180px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: 70px 0;
+  }
+}
+
 .gym__inner {
   @include inner;
+
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .gym__content {
+  flex-basis: 41%;
+  padding: 50px 29px 30px 60px;
+
+  @media (max-width: $width_viewport_tablet) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 89px;
+  }
+
+  @media (max-width: 490px) {
+    padding: 0;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    display: block;
+  }
+
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    margin: 0 0 20px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -21,6 +63,8 @@
     }
 
     @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 15px;
+
       font-size: $font_size_h2_mobile_s;
     }
   }
@@ -28,7 +72,7 @@
   & p {
     @include indent_p;
 
-    margin: 0;
+    margin: 0 0 30px;
 
     font-size: $font_size_p_desktop_xxxs;
     line-height: $line_height_p_desktop_xxl;
@@ -40,14 +84,141 @@
   }
 
   & p + p {
+    margin: 0 0 13px;
+
     font-weight: $font_weight_light;
     font-size: $font_size_p_desktop_xxs;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 40px;
+
+      text-align: center;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 30px;
+
+      text-align: left;
+    }
+  }
+
+  & p + p + p {
+    @media (max-width: $width_viewport_tablet) {
+      display: none;
+    }
+  }
+}
+
+.gym__image {
+  flex-basis: 57%;
+  width: 660px;
+  max-height: 401px;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 100%;
+    width: 678px;
+    max-height: 345px;
+
+    background-color: $color_gray_leghten;
+    background-image: url("../img/gym-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  @media (max-width: $width_viewport_mobile) {
+    width: 320px;
+    min-height: 313px;
+    max-height: none;
+    margin: 0 0 40px;
+
+    background-color: $color_gray_leghten;
+    background-image: url("../img/gym-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (max-width: 490px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  & img {
+    @media (max-width: $width_viewport_tablet) {
+      visibility: hidden;
+    }
+  }
+}
+
+.gym__video-wrapper {
+  position: absolute;
+  right: 0;
+  bottom: -90px;
+  left: 100px;
+
+  width: 364px;
+  max-height: 228px;
+  margin: 0 auto;
+
+  background-color: $color_blue_night;
+
+  @media (max-width: $width_viewport_tablet) {
+    bottom: -80px;
+    left: 0;
+
+    width: 266px;
+    max-height: 167px;
+
+    background-color: $color_blue_night;
+    background-image: url("../img/transparency-video-gym-tablet@1x.png"), url("../img/video-gym-tablet@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    position: relative;
+    bottom: 0;
+
+    width: 320px;
+
+    background-color: $color_blue_night;
+    background-image: url("../img/transparency-video-gym-mobile@1x.png"), url("../img/video-gym-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+
+  @media (max-width: 490px) {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+}
+
+.gym__video {
+  opacity: 0.5;
+
+  @media (max-width: $width_viewport_tablet) {
+    &[poster] {
+      width: inherit;
+
+      visibility: hidden;
+    }
   }
 }
 
 .gym__play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
   width: 100px;
   height: 100px;
+  margin: auto;
 
   background-color: transparent;
   background-image: url("../img/button-play@1x.png");
@@ -55,4 +226,10 @@
   background-position: center;
   background-size: cover;
   border: none;
+  cursor: pointer;
+
+  @media (max-width: $width_viewport_tablet) {
+    width: 73px;
+    height: 73px;
+  }
 }
