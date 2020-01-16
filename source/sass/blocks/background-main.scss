@@ -1,0 +1,23 @@
+@import "mixins.scss";
+@import "vars.scss";
+
+.background-main {
+  background-color: $color_white_dark;
+  background-image: url("../img/bg-barbell-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: right top 70%;
+  background-size: auto;
+
+  @media (max-width: $width_viewport_tablet) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right top 96%;
+    background-size: auto;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    background-color: $color_white_dark;
+    background-image: none;
+  }
+}

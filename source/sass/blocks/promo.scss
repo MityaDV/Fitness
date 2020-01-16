@@ -1,6 +1,10 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.promo {
+  background-color: $color_white;
+}
+
 .promo__inner {
   @include inner;
 }

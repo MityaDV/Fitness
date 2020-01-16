@@ -1,19 +1,46 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.subscription {
+  padding: 120px 0 95px;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 100px 0 65px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: 70px 0;
+  }
+}
+
 .subscription__inner {
   @include inner;
 }
 
 .subscription__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 40px;
+
+  @media (max-width: $width_viewport_tablet) {
+    margin: 0 0 45px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    margin: 0 0 35px;
+  }
+
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    flex-basis: 100%;
+    margin: 0 0 45px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
     font-family: $font_family_second_base;
+    text-align: center;
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
@@ -21,6 +48,8 @@
     }
 
     @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 30px;
+
       font-size: $font_size_h2_mobile_s;
     }
   }
@@ -28,6 +57,9 @@
 
 .subscription__list {
   @include list;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .subscription__button {
@@ -60,17 +92,59 @@
   }
 }
 
+.subscription__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .subscription__card {
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 31.3%;
+  min-height: 448px;
+  margin: 0 3% 3% 0;
+  padding: 68px;
+
+  background-color: $color_white;
+
+  @media (max-width: $width_viewport_tablet) {
+    width: 442px;
+    margin: 0 0 40px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    margin: 0 0 35px;
+    padding: 55px 42px;
+  }
+
+  @media (max-width: 490px) {
+    width: 100%;
+  }
+
+  &:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
   & h3 {
     @include heading_h3;
 
-    margin: 0;
+    margin: 0 0 15px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_l;
     line-height: $line_height_h3_desktop_s;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 18px;
+
       font-size: $font_size_h3_tablet_l;
       line-height: $line_height_h3_tablet_s;
     }
@@ -84,7 +158,7 @@
   & p {
     @include indent_p;
 
-    margin: 0;
+    margin: 0 0 75px;
 
     font-size: $font_size_p_desktop_xxs;
     line-height: $line_height_p_desktop_xxl;
@@ -97,10 +171,16 @@
   }
 
   & p + p {
+    margin: 0 0 64px;
+
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxl;
     line-height: $line_height_p_desktop_xxl;
     color: $color_blue_egyptian;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 45px;
+    }
 
     @media (max-width: $width_viewport_mobile) {
       font-size: $font_size_p_mobile_l;
