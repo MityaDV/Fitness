@@ -3,11 +3,18 @@
 
 .button-slider__icon {
   fill: none;
+
+  @media (max-width: 360px) {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 .button-slider {
   position: absolute;
-  top: 60%;
+  top: 50%;
+
+  min-height: 40px;
 
   background: transparent;
   border: none;
@@ -15,9 +22,41 @@
 
   &--prev {
     left: -56px;
+
+    @media (max-width: 1270px) {
+      left: -40px;
+    }
+
+    @media (max-width: 1230px) {
+      left: -25px;
+    }
+
+    @media (max-width: $width_viewport_tablet) {
+      left: 0;
+    }
+
+    @media (max-width: 360px) {
+      left: -6px;
+    }
   }
 
   &--next {
     right: -56px;
+
+    @media (max-width: 1270px) {
+      right: -40px;
+    }
+
+    @media (max-width: 1230px) {
+      right: -25px;
+    }
+
+    @media (max-width: $width_viewport_tablet) {
+      right: 0;
+    }
+
+    @media (max-width: 360px) {
+      right: -6px;
+    }
   }
 }
