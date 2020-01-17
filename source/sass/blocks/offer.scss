@@ -1,7 +1,7 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-.action__inner {
+.offer__inner {
   @include inner;
 
   & h2 {
@@ -26,11 +26,11 @@
   }
 }
 
-.action__list-year {
+.offer__list-year {
   @include list;
 }
 
-.action__item-year {
+.offer__item-year {
   &--color {
     background-color: $color_red_torch;
   }
@@ -74,7 +74,7 @@
   }
 }
 
-.action__link-year {
+.offer__link-year {
   font-weight: $font_weight_bold;
   font-size: $font_size_p_desktop_xs;
   line-height: $line_height_p_desktop_xs;
@@ -83,11 +83,11 @@
   letter-spacing: 0.05em;
 }
 
-.action__list-extra {
+.offer__list-extra {
   @include list;
 }
 
-.action__item-extra {
+.offer__item-extra {
   & h3 {
     @include heading_h3;
 
@@ -120,7 +120,7 @@
   }
 }
 
-.action__link {
+.offer__link {
   font-weight: $font_weight_bold;
   font-size: $font_size_p_desktop_s;
   line-height: $line_height_p_desktop_xxs;
