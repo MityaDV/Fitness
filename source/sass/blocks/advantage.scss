@@ -1,13 +1,19 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.advantage {
+  padding: 120px 0;
+
+  background-color: $color_white_dark;
+}
+
 .advantage__inner {
   @include inner;
 
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    margin: 0 0 80px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -26,15 +32,41 @@
   }
 }
 
+.advantage__content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 60px;
+}
+
 .advantage__list {
   @include list;
+
+  flex-basis: 33%;
+  margin: 0 5% 0 0;
+  padding: 0 0 0 26px;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+    padding: 0;
+  }
 }
 
 .advantage__item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 80px;
+
+  &:first-child {
+    margin: 0 0 147px;
+  }
+
   & h3 {
     @include heading_h3;
 
-    margin: 0;
+    width: 56%;
+    margin: 0 0 10px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_xs;
@@ -46,9 +78,14 @@
     }
   }
 
+  &--large h3 {
+    width: 63%;
+  }
+
   & p {
     @include indent_p;
 
+    width: 58%;
     margin: 0;
 
     font-weight: $font_weight_light;
@@ -60,10 +97,21 @@
       line-height: $line_height_p_tablet_l;
     }
   }
+
+  &--large p {
+    width: 66%;
+  }
 }
 
 .advantage__list-card {
   @include list;
+
+  width: 34%;
+  margin: -27px 30px 0 0;
+
+  &--small {
+    width: 21%;
+  }
 }
 
 .advantage__item-card {
@@ -78,6 +126,8 @@
   }
 
   &--feature {
+    margin: -20px 0 0;
+
     font-size: $font_size_p_desktop_xs;
     line-height: $line_height_p_desktop_xxl;
     color: $color_blue_cerulean;
@@ -89,6 +139,13 @@
 }
 
 .advantage__card {
+  display: flex;
+  flex-basis: 23%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5% 0 0;
+  padding: 30px 33px;
+
   background-color: $color_blue_midnight_light;
 
   & p {
@@ -110,7 +167,7 @@
   & h3 {
     @include heading_h3;
 
-    margin: 0;
+    margin: 0 0 40px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_l;
@@ -126,5 +183,6 @@
   & h3 + p {
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xxs;
+    text-align: center;
   }
 }
