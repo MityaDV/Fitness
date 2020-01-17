@@ -14,6 +14,8 @@
 .advantage__inner {
   @include inner;
 
+  position: relative;
+
   & h2 {
     @include heading_h2;
 
@@ -38,58 +40,79 @@
   }
 }
 
-.advantage__content {
-  position: relative;
-
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 60px;
-
-  // @media (max-width: $width_viewport_tablet) {
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
-}
-
-.advantage__list {
+.advantage__row {
   @include list;
 
   display: flex;
   flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 0 0 26px;
+  padding: 0 60px;
 
-  &:first-child {
-    margin: 0 0 147px;
+  &:first-of-type {
+    margin: 0 0 118px;
   }
 
-  // @media (max-width: $width_viewport_tablet) {
-  //   flex-basis: auto;
-  //   justify-content: space-between;
-  //   width: 100%;
-  //   margin: 0;
-  //   padding: 0;
-  // }
+  @media (max-width: $width_viewport_tablet) {
+    padding: 0;
+  }
+}
+
+.advantage__card {
+  display: flex;
+  flex-basis: 44%;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &:nth-child(odd) {
+    flex-basis: 38%;
+    padding: 0 0 0 26px;
+  }
+
+  &:nth-child(even) {
+    justify-content: flex-end;
+  }
+
+  &:nth-child(even) .advantage__list {
+    flex-basis: 15%;
+  }
+}
+
+.advantage__list {
+  @include list;
+
+  flex-basis: 30%;
+  margin: 0 30px 0 0;
 }
 
 .advantage__item {
-  display: flex;
-  flex-basis: 33%;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-height: 80px;
+  &--amount {
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxxl;
+    line-height: $line_height_p_desktop_s;
 
-  // @media (max-width: $width_viewport_tablet) {
-  //   flex-basis: 31%;
-  //   max-height: 90px;
-  // }
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_l;
+    }
+  }
+
+  &--feature {
+    font-size: $font_size_p_desktop_xs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_blue_cerulean;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxs;
+    }
+  }
+}
+
+.advantage__text {
+  flex-basis: 50%;
 
   & h3 {
     @include heading_h3;
 
-    width: 68%;
     margin: 0 0 10px;
 
     font-weight: $font_weight_bold;
@@ -102,14 +125,9 @@
     }
   }
 
-  &--small h3 {
-    width: 55%;
-  }
-
   & p {
     @include indent_p;
 
-    width: 68%;
     margin: 0;
 
     font-weight: $font_weight_light;
@@ -121,50 +139,11 @@
       line-height: $line_height_p_tablet_l;
     }
   }
-
-  &--small p {
-    width: 55%;
-  }
 }
 
-.advantage__list-card {
-  @include list;
-
-  width: 34%;
-  margin: -27px 30px 0 0;
-
-  &--small {
-    width: 21%;
-  }
-}
-
-.advantage__item-card {
-  &--amount {
-    font-weight: $font_weight_bold;
-    font-size: $font_size_p_desktop_xxxxl;
-    line-height: $line_height_p_desktop_xxl;
-
-    @media (max-width: $width_viewport_tablet) {
-      font-size: $font_size_p_tablet_l;
-    }
-  }
-
-  &--feature {
-    margin: -20px 0 0;
-
-    font-size: $font_size_p_desktop_xs;
-    line-height: $line_height_p_desktop_xxl;
-    color: $color_blue_cerulean;
-
-    @media (max-width: $width_viewport_tablet) {
-      font-size: $font_size_p_tablet_xxs;
-    }
-  }
-}
-
-.advantage__card {
+.advantage__card-center {
   position: absolute;
-  top: 0;
+  top: 135px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -175,15 +154,18 @@
   justify-content: center;
   align-items: center;
   max-width: 240px;
+  min-height: 307px;
   margin: auto;
   padding: 35px 33px;
 
   background-color: $color_blue_midnight_light;
 
-  // @media (max-width: $width_viewport_tablet) {
-  //   width: 46%;
-  //   margin: 0;
-  // }
+  @media (max-width: $width_viewport_tablet) {
+    flex-direction: row;
+    max-width: 442px;
+    max-height: 239px;
+    padding: 35px 133px;
+  }
 
   & p {
     @include indent_p;
@@ -196,8 +178,11 @@
     color: $color_white;
 
     @media (max-width: $width_viewport_tablet) {
+      flex-basis: 100%;
+
       font-size: $font_size_p_tablet_xxxl;
-      line-height: $line_height_p_tablet_xxl;
+      line-height: $line_height_p_tablet_s;
+      text-align: center;
     }
   }
 
@@ -212,6 +197,8 @@
     color: $color_white;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 20px;
+
       font-size: $font_size_h3_tablet_xs;
       line-height: $line_height_h3_tablet_xs;
     }
@@ -220,6 +207,7 @@
   & h3 + p {
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xxs;
+    line-height: $line_height_p_tablet_xxl;
     text-align: center;
   }
 }
