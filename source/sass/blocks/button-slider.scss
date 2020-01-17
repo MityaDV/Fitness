@@ -4,3 +4,20 @@
 .button-slider__icon {
   fill: none;
 }
+
+.button-slider {
+  position: absolute;
+  top: 60%;
+
+  background: transparent;
+  border: none;
+  transform: translateY(-50%);
+
+  &--prev {
+    left: -56px;
+  }
+
+  &--next {
+    right: -56px;
+  }
+}

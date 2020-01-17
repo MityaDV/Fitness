@@ -1,13 +1,19 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.trainer {
+  padding: 60px 0 120px;
+}
+
 .trainer__inner {
   @include inner;
+
+  position: relative;
 
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    margin: 0 0 62px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -23,82 +29,5 @@
     @media (max-width: $width_viewport_mobile) {
       font-size: $font_size_h2_mobile_s;
     }
-  }
-}
-
-.slider-trainer__list {
-  @include list;
-}
-
-.slider-trainer__item {
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 294px;
-
-  & > p {
-    @include indent_p;
-
-    margin: 0;
-
-    font-weight: $font_weight_bold;
-    font-size: $font_size_p_desktop_xxxs;
-    line-height: $line_height_p_desktop_xxl;
-    color: $color_white;
-
-    @media (max-width: $width_viewport_tablet) {
-      font-size: $font_size_p_tablet_xxxxs;
-      line-height: $line_height_p_tablet_xxl;
-    }
-  }
-}
-
-.slider-trainer__card {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  min-height: 294px;
-
-  background-color: $color_blue_bali_hai;
-
-  & p {
-    margin: 0;
-
-    font-weight: $font_weight_bold;
-    font-size: $font_size_p_desktop_xxxs;
-    line-height: $line_height_h3_desktop_xxs;
-    color: $color_white;
-
-    @media (max-width: $width_viewport_tablet) {
-      font-size: $font_size_p_tablet_xxxxs;
-      line-height: $line_height_p_tablet_xxl;
-    }
-  }
-
-  & p + p {
-    font-weight: $font_weight_normal;
-    font-size: $font_size_p_desktop_xxs;
-    color: $color_blue_haze;
-
-    @media (max-width: $width_viewport_tablet) {
-      font-size: $font_size_p_tablet_xxxs;
-    }
-  }
-
-  & ul {
-    @include list;
-
-    font-size: $font_size_p_desktop_xs;
-    line-height: $line_height_p_desktop_xxl;
-    color: $color_white;
   }
 }

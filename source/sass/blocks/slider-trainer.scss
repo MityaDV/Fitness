@@ -1,2 +1,126 @@
 @import "mixins.scss";
 @import "vars.scss";
+
+.slider-trainer {
+  // position: relative;
+  overflow: hidden;
+}
+
+.slider-trainer__list {
+  @include list;
+
+  display: flex;
+  // flex-wrap: wrap;
+
+  transition: transform 0.6s ease;
+}
+
+.slider-trainer__item {
+  position: relative;
+
+  display: flex;
+  flex: 0 0 22.4%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  // width: 22.4%;
+  // flex-basis: auto;
+  max-width: 22.4%;
+  min-height: 294px;
+  margin: 0 3% 0 0;
+
+  cursor: pointer;
+
+  // &:nth-child(4n+4) {
+  //   margin-right: 0;
+  // }
+
+  & > p {
+    @include indent_p;
+
+    position: absolute;
+    bottom: 24px;
+
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxxs;
+      line-height: $line_height_p_tablet_xxl;
+    }
+  }
+
+  &:hover .slider-trainer__card {
+    display: flex;
+  }
+
+  &:focus-within .slider-trainer__card {
+    display: flex;
+  }
+}
+
+.slider-trainer__card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  // flex: 0 0 25%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  // max-width: 25%;
+  width: 100%;
+  min-height: 294px;
+  padding: 53px 54px;
+
+  background-color: $color_blue_bali_hai;
+
+  & p {
+    margin: 0;
+
+    font-weight: $font_weight_bold;
+    font-size: $font_size_p_desktop_xxxs;
+    line-height: $line_height_h3_desktop_xxs;
+    color: $color_white;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxxs;
+      line-height: $line_height_p_tablet_xxl;
+    }
+  }
+
+  & p + p {
+    margin: 0 0 30px;
+
+    font-weight: $font_weight_normal;
+    font-size: $font_size_p_desktop_xxs;
+    color: $color_blue_haze;
+
+    @media (max-width: $width_viewport_tablet) {
+      font-size: $font_size_p_tablet_xxxs;
+    }
+  }
+
+  & ul {
+    @include list;
+
+    font-size: $font_size_p_desktop_xs;
+    line-height: $line_height_p_desktop_xxl;
+    color: $color_white;
+  }
+
+  & ul li {
+    margin: 0 0 11px;
+  }
+
+  & ul li:last-child {
+    margin: 0;
+  }
+}
