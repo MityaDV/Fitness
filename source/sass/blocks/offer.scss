@@ -64,10 +64,6 @@
   @media (max-width: $width_viewport_mobile) {
     display: block;
   }
-
-  // @media (max-width: 980px) {
-  //   flex-basis: auto;
-  // }
 }
 
 .offer__item-year {
@@ -215,10 +211,6 @@
   @media (max-width: $width_viewport_mobile) {
     display: block;
   }
-
-  // @media (max-width: 980px) {
-  //   flex-basis: auto;
-  // }
 }
 
 .offer__item-extra {
@@ -234,7 +226,6 @@
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 48%;
-    // padding: 35px;
     margin: 0 0 30px;
   }
 
