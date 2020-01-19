@@ -292,6 +292,12 @@
       }
     }
   }
+
+  &:last-child {
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0;
+    }
+  }
 }
 
 .offer__link {
