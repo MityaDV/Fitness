@@ -1,6 +1,10 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.contact {
+  padding: 60px 0 0;
+}
+
 .contact__content {
   display: flex;
 
@@ -10,22 +14,29 @@
 }
 
 .contact__background-form {
-  flex-basis: 50%;
+  flex-grow: 2;
 
   background-color: $color_blue_midnight;
 }
 
 .contact__background-column {
-  flex-basis: 50%;
+  flex-grow: 2;
 
   background-color: $color_white;
+  border-top: 1px solid $color_gray_light;
 }
 
 .contact__column {
+  display: flex;
+  flex-wrap: wrap;
+  width: 580px;
+  padding: 66px 54px 66px 120px;
+
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    flex-basis: 100%;
+    margin: 0 0 55px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -45,7 +56,19 @@
 .contact__list {
   @include list;
 
+  flex-basis: 42%;
+
   line-height: $line_height_p_desktop_xxl;
+
+  &:nth-of-type(2n+1) {
+    margin: 0 60px 0 0;
+  }
+
+  &:nth-of-type(2n+2) {
+    padding: 0 0 0 60px;
+
+    border-left: 1px solid $color_gray_light;
+  }
 }
 
 .contact__item {
@@ -56,12 +79,18 @@
   }
 
   &--title {
+    margin: 0 0 7px;
+
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxs;
 
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_p_tablet_xxxxxs;
     }
+  }
+
+  &:nth-child(2n+2):not(:last-child) {
+    margin: 0 0 22px;
   }
 }
 
