@@ -1,13 +1,33 @@
 @import "mixins.scss";
 @import "vars.scss";
 
+.offer {
+  padding: 120px 0 60px;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 100px 0 20px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: 70px 0 40px;
+  }
+}
+
 .offer__inner {
   @include inner;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $width_viewport_mobile) {
+    display: block;
+  }
 
   & h2 {
     @include heading_h2;
 
-    margin: 0;
+    flex-basis: 100%;
+    margin: 0 0 60px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -17,6 +37,8 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 50px;
+
       font-size: $font_size_h2_tablet_s;
     }
 
@@ -28,11 +50,34 @@
 
 .offer__list-year {
   @include list;
+
+  display: flex;
+  flex-basis: 48%;
+  flex-wrap: wrap;
+  margin: 0 3.5% 0 0;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 100%;
+    margin: 0 0 30px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    display: block;
+  }
+
+  // @media (max-width: 980px) {
+  //   flex-basis: auto;
+  // }
 }
 
 .offer__item-year {
-  &--color {
-    background-color: $color_red_torch;
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+
+  @media (max-width: $width_viewport_mobile) {
+    flex-basis: auto;
+    align-items: center;
   }
 
   & h3 {
@@ -54,62 +99,171 @@
   & p {
     @include indent_p;
 
-    margin: 0;
+    margin: 0 0 30px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxxl;
-    line-height: $line_height_p_desktop_xxxl;
+    line-height: $line_height_p_desktop_s;
     color: $color_white;
 
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_p_tablet_xxl;
-      line-height: $line_height_p_tablet_xxxl;
+      line-height: $line_height_p_tablet_s;
     }
   }
 
   & p + p {
+    margin: 0 0 168px;
+
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xxxs;
     line-height: $line_height_p_desktop_xl;
+
+    @media (max-width: $width_viewport_tablet) {
+      width: 190px;
+      margin: 0 0 170px;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 35px;
+
+      text-align: center;
+    }
+  }
+
+  &--color {
+    padding: 37px 44px 45px;
+
+    background-color: $color_red_torch;
+
+    @media (max-width: $width_viewport_tablet) {
+      flex-basis: 41%;
+      padding: 37px 45px 45px;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      flex-basis: auto;
+    }
+  }
+
+  &--picture {
+    justify-content: flex-end;
+
+    background: linear-gradient(to right, $color_blue_cornflower 4%, $color_blue_royal 87%);
+
+    @media (max-width: $width_viewport_tablet) {
+      flex-basis: 59%;
+
+      background-image: url("../img/offer-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+
+    @media (max-width: 440px) {
+      background-image: url("../img/offer-mobile@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+
+  & img {
+    height: 462px;
+
+    @media (max-width: $width_viewport_tablet) {
+      height: inherit;
+
+      visibility: hidden;
+    }
+
+    @media (max-width: 440px) {
+      height: 299px;
+    }
   }
 }
 
 .offer__link-year {
+  align-self: flex-start;
+  padding: 0 0 4px;
+
   font-weight: $font_weight_bold;
   font-size: $font_size_p_desktop_xs;
   line-height: $line_height_p_desktop_xs;
   color: $color_white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  box-shadow: 0 1px 0 0 $color_white;
+
+  @media (max-width: $width_viewport_mobile) {
+    align-self: auto;
+  }
 }
 
 .offer__list-extra {
   @include list;
+
+  display: flex;
+  flex-basis: 48%;
+  flex-wrap: wrap;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 100%;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    display: block;
+  }
+
+  // @media (max-width: 980px) {
+  //   flex-basis: auto;
+  // }
 }
 
 .offer__item-extra {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 31px;
+
+  border: 7px solid transparent;
+  border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+  border-image-slice: 1;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 48%;
+    // padding: 35px;
+    margin: 0 0 30px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    align-items: center;
+  }
+
   & h3 {
     @include heading_h3;
 
-    margin: 0;
+    margin: 0 0 17px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_l;
-    line-height: $line_height_h3_desktop_l;
+    line-height: $line_height_h2_desktop_s;
     color: $color_blue_midnight_light;
 
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_h3_tablet_l;
-      line-height: $line_height_h3_tablet_l;
+      line-height: $line_height_p_tablet_s;
     }
   }
 
   & p {
     @include indent_p;
 
-    margin: 0;
+    margin: 0 0 54px;
 
-    font-size: $font_size_p_desktop_xxxxxs;
+    font-size: $font_size_p_desktop_xxs;
     line-height: $line_height_p_desktop_l;
     color: $color_blue_midnight_light;
 
@@ -117,14 +271,52 @@
       font-size: $font_size_p_tablet_xxxs;
       line-height: $line_height_p_tablet_l;
     }
+
+    @media (max-width: $width_viewport_mobile) {
+      text-align: center;
+    }
+  }
+
+  &:nth-child(2n+1) {
+    margin: 0 0 40px;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 auto 30px 0;
+
+      & p {
+        width: 155px;
+        margin: 0 0 33px;
+      }
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &:nth-child(2n+2) {
+    & p {
+      @media (max-width: $width_viewport_mobile) {
+        width: 160px;
+      }
+    }
   }
 }
 
 .offer__link {
+  align-self: flex-start;
+  padding: 0 0 4px;
+
   font-weight: $font_weight_bold;
   font-size: $font_size_p_desktop_s;
   line-height: $line_height_p_desktop_xxs;
   color: $color_blue_midnight_light;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
+  box-shadow: 0 1px 0 0 $color_blue_midnight_light;
+
+  @media (max-width: $width_viewport_mobile) {
+    align-self: auto;
+  }
 }
