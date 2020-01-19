@@ -148,19 +148,59 @@
     background: linear-gradient(to right, $color_blue_cornflower 4%, $color_blue_royal 87%);
 
     @media (max-width: $width_viewport_tablet) {
+      position: relative;
+
       flex-basis: 59%;
 
       background-image: url("../img/offer-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: cover;
+      background-size: contain;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        width: 120px;
+        height: 100%;
+
+        background: linear-gradient(to bottom, #538ee6, #5490e6 28%, #5a9ce8 40%, #6cadea 62%, #95c1ef 80%, #bad5f3);
+
+        @media (max-width: $width_viewport_mobile) {
+          width: 224px;
+
+          background: linear-gradient(to bottom, #538ee6, #5490e6 33%, #5a9ce8 43%, #6cadea 65%, #95c1ef 90%, #bad5f3 106%);
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        width: 120px;
+        height: 100%;
+
+        background: linear-gradient(to bottom, #3f67d9, #4776e2 20%, #5087e4 42%, #5b9de8 60%, #88bbed 80%, #b6d4f3);
+
+        @media (max-width: $width_viewport_mobile) {
+          width: 223px;
+
+          background: linear-gradient(to bottom, #3f67d9, #4776e2 22%, #5087e4 45%, #5b9de8 66%, #88bbed 89%, #b6d4f3 104%);
+        }
+      }
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: $width_viewport_mobile) {
       background-image: url("../img/offer-mobile@1x.jpg");
       background-repeat: no-repeat;
       background-position: center top;
-      background-size: cover;
+      background-size: contain;
     }
   }
 
@@ -173,7 +213,7 @@
       visibility: hidden;
     }
 
-    @media (max-width: 440px) {
+    @media (max-width: $width_viewport_mobile) {
       height: 299px;
     }
   }
