@@ -15,7 +15,7 @@
   display: flex;
   flex-wrap: wrap;
 
-  & p {
+  & span {
     @include indent_p;
 
     display: flex;
@@ -30,13 +30,19 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      flex-basis: 100%;
+      flex-basis: 51%;
 
       line-height: $line_height_p_tablet_xxxs;
     }
 
     @media (max-width: $width_viewport_mobile) {
+      flex-basis: 70%;
+
       font-size: $font_size_p_mobile_xxxxxxxs;
+    }
+
+    @media (max-width: 452px) {
+      flex-basis: 100%;
     }
   }
 }
@@ -68,9 +74,11 @@
 
   &--buttom {
     justify-content: space-between;
+    padding: 0 0 0 170px;
 
     @media (max-width: $width_viewport_tablet) {
       justify-content: flex-end;
+      padding: 0;
     }
 
     @media (max-width: $width_viewport_mobile) {
@@ -134,12 +142,4 @@
   line-height: $line_height_p_desktop_xxs;
   color: $color_white;
   text-transform: uppercase;
-}
-
-.prime__button {
-  margin: 0 0 0 170px;
-
-  @media (max-width: $width_viewport_tablet) {
-    margin: 0;
-  }
 }

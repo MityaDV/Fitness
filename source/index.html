@@ -28,7 +28,7 @@
 
   <!-- Хедер -->
 
-  <div class="background">
+  <div class="wrapper-header-prime">
     <header class="header">
       <div class="header__inner">
         <div class="header__row">
@@ -46,9 +46,7 @@
 
     <section class="prime">
       <div class="prime__inner">
-        <div class="prime__row prime__row--top">
-          <p>омск</p>
-        </div>
+        <span>омск</span>
         <div class="prime__row prime__row--middle">
           <ul class="prime__list">
             <li class="prime__item">Тренажёрный зал</li>
@@ -57,7 +55,8 @@
           </ul>
           <h1>Фитнес центр</h1>
         </div>
-        <div class="prime__row prime__row--buttom"><button class="prime__button btn btn--buy" type="button">Купить
+        <div class="prime__row prime__row--buttom">
+          <button class="btn btn--buy" type="button">Купить
             абонемент</button>
           <ul class="prime__list-social">
             <li class="prime__item-social">
@@ -109,7 +108,7 @@
 
     <!-- Блок Абонементы -->
 
-    <div class="background-main">
+    <div class="wrapper-subscription-promo">
       <section class="subscription">
         <div class="subscription__inner">
           <div class="subscription__row">
@@ -180,9 +179,6 @@
               заполнить заявку
             </a>
           </div>
-          <div class="promo__image">
-            <img src="img/promo-desktop@1x.jpg" alt="Фото спортсмена" width="660" height="500">
-          </div>
         </div>
       </section>
     </div>
@@ -193,6 +189,12 @@
       <div class="trainer__inner">
         <h2>Тренеры</h2>
         <div class="trainer__content slider-trainer">
+          <button class="button-slider button-slider--prev" type="button" aria-label="кнопка предыдущий слайд">
+            <svg class="button-slider__icon" aria-hidden="true" role="presentation" focusable="false" width="16"
+              height="32">
+              <use xlink:href="#icon-arrow-prev"></use>
+            </svg>
+          </button>
           <ul class="slider-trainer__list">
             <li class="slider-trainer__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
@@ -299,12 +301,6 @@
               </div>
             </li>
           </ul>
-          <button class="button-slider button-slider--prev" type="button" aria-label="кнопка предыдущий слайд">
-            <svg class="button-slider__icon" aria-hidden="true" role="presentation" focusable="false" width="16"
-              height="32">
-              <use xlink:href="#icon-arrow-prev"></use>
-            </svg>
-          </button>
           <button class="button-slider button-slider--next" type="button" aria-label="кнопка следующий слайд">
             <svg class="button-slider__icon" aria-hidden="true" role="presentation" focusable="false" width="16"
               height="32">
@@ -321,6 +317,7 @@
       <div class="advantage__inner">
         <h2>Наши преимущества</h2>
         <ul class="advantage__row">
+
           <li class="advantage__card">
             <ul class="advantage__list">
               <li class="advantage__item advantage__item--amount">900</li>
@@ -331,6 +328,7 @@
               <p>Занимайтесь без очередей и толкучки</p>
             </div>
           </li>
+
           <li class="advantage__card">
             <ul class="advantage__list">
               <li class="advantage__item advantage__item--amount">70</li>
@@ -343,12 +341,9 @@
             </div>
           </li>
         </ul>
-        <div class="advantage__card-center">
-          <p>100</p>
-          <h3>Тренажеров</h3>
-          <p>Современные тренажеры на все группы мышц</p>
-        </div>
+
         <ul class="advantage__row">
+
           <li class="advantage__card">
             <ul class="advantage__list">
               <li class="advantage__item advantage__item--amount">350</li>
@@ -359,6 +354,7 @@
               <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
             </div>
           </li>
+
           <li class="advantage__card">
             <ul class="advantage__list">
               <li class="advantage__item advantage__item--amount">5+</li>
@@ -369,7 +365,13 @@
               <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
             </div>
           </li>
+
         </ul>
+        <div class="advantage__card-center">
+          <p>100</p>
+          <h3>Тренажеров</h3>
+          <p>Современные тренажеры на все группы мышц</p>
+        </div>
       </div>
     </section>
 
@@ -492,36 +494,36 @@
             Supergym
           </a>
           <!-- <nav class="footer__navigation"> -->
-            <a href="#" class="footer__navigation-link">Услуги</a>
-            <a href="#" class="footer__navigation-link">Абонементы</a>
-            <a href="#" class="footer__navigation-link">Акции</a>
-            <a href="#" class="footer__navigation-link">Тренеры</a>
-            <a href="#" class="footer__navigation-link">Расписание</a>
+          <a href="#" class="footer__navigation-link">Услуги</a>
+          <a href="#" class="footer__navigation-link">Абонементы</a>
+          <a href="#" class="footer__navigation-link">Акции</a>
+          <a href="#" class="footer__navigation-link">Тренеры</a>
+          <a href="#" class="footer__navigation-link">Расписание</a>
           <!-- </nav> -->
-          </div>
-          <ul class="footer__list-social">
-            <li class="footer__item-social">
-              <a class="footer__social-link" href="#" aria-label="Supergym во Вконтакте">
-                <svg role="img" width="24" height="13">
-                  <use xlink:href="#icon-vk"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__item-social">
-              <a class="footer__social-link" href="#" aria-label="Supergym в Инстаграмме">
-                <svg role="img" width="24" height="24">
-                  <use xlink:href="#icon-insta"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer__item-social">
-              <a class="footer__social-link" href="#" aria-label="Supergym в Фейсбуке">
-                <svg role="img" width="12" height="24">
-                  <use xlink:href="#icon-fb"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        </div>
+        <ul class="footer__list-social">
+          <li class="footer__item-social">
+            <a class="footer__social-link" href="#" aria-label="Supergym во Вконтакте">
+              <svg role="img" width="24" height="13">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item-social">
+            <a class="footer__social-link" href="#" aria-label="Supergym в Инстаграмме">
+              <svg role="img" width="24" height="24">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__item-social">
+            <a class="footer__social-link" href="#" aria-label="Supergym в Фейсбуке">
+              <svg role="img" width="12" height="24">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
 
