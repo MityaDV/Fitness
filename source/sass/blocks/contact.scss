@@ -3,13 +3,21 @@
 
 .contact {
   padding: 60px 0 0;
+
+  @media (max-width: $width_viewport_tablet) {
+    padding: 50px 0 0;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: 35px 0 0;
+  }
 }
 
 .contact__content {
   display: flex;
 
   @media (max-width: $width_viewport_tablet) {
-    flex-direction: column;
+    display: block;
   }
 }
 
@@ -24,6 +32,10 @@
 
   background-color: $color_white;
   border-top: 1px solid $color_gray_light;
+
+  @media (max-width: $width_viewport_tablet) {
+    border: none;
+  }
 }
 
 .contact__column {
@@ -31,6 +43,23 @@
   flex-wrap: wrap;
   width: 580px;
   padding: 66px 54px 66px 120px;
+
+  @media (max-width: $width_viewport_tablet) {
+    width: 590px;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 70px 50px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 15px;
+  }
 
   & h2 {
     @include heading_h2;
@@ -44,6 +73,8 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 45px;
+
       font-size: $font_size_h2_tablet_s;
     }
 
@@ -60,14 +91,40 @@
 
   line-height: $line_height_p_desktop_xxl;
 
+  @media (max-width: $width_viewport_tablet) {
+    flex-basis: 45%;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    flex-basis: auto;
+  }
+
   &:nth-of-type(2n+1) {
     margin: 0 60px 0 0;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 47px 0 0;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 25px;
+    }
   }
 
   &:nth-of-type(2n+2) {
     padding: 0 0 0 60px;
 
     border-left: 1px solid $color_gray_light;
+
+    @media (max-width: $width_viewport_tablet) {
+      padding: 0 0 0 47px;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      padding: 0;
+
+      border: none;
+    }
   }
 }
 
@@ -85,12 +142,18 @@
     font-size: $font_size_p_desktop_xxs;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 10px;
+
       font-size: $font_size_p_tablet_xxxxxs;
     }
   }
 
   &:nth-child(2n+2):not(:last-child) {
     margin: 0 0 22px;
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 25px;
+    }
   }
 }
 
