@@ -340,9 +340,6 @@
                 парковке</p>
             </div>
           </li>
-        </ul>
-
-        <ul class="advantage__row">
 
           <li class="advantage__card">
             <ul class="advantage__list">
@@ -365,8 +362,8 @@
               <p>Добивайтесь своих целей быстрее с профессиональным тренером</p>
             </div>
           </li>
-
         </ul>
+
         <div class="advantage__card-center">
           <p>100</p>
           <h3>Тренажеров</h3>
@@ -453,9 +450,9 @@
             <div class="form__group">
               <input type="text" id="user-name" name="username" placeholder="Имя" required="required">
               <label class="form__label" for="user-name"></label>
-              <input type="tel" id="user-phone" name="userphone" pattern="" placeholder="Телефон" required
-                title="Формат телефона 8-800-555-55-55">
-              <!--заполнить pattern-->
+              <input type="tel" id="user-phone" name="userphone"
+                pattern="^[+]{1}[0-9]{1} [(]{1}[0-9]{3}[)]{1} [0-9]{3} [0-9]{2} [0-9]{2}$" placeholder="Телефон"
+                required title="Формат телефона +7 (999) 999 99 99" minlength="18" maxlength="18">
               <label class="form__label" for="user-phone"></label>
             </div>
             <button class="form__button btn btn--send" type="submit">Отправить</button>
@@ -485,49 +482,48 @@
       </div>
     </section>
 
-    <!-- Футер -->
-
-    <footer class="footer">
-      <div class="footer__inner">
-        <div class="footer__navigation">
-          <a href="#" class="footer__logo-link" aria-label="Логотип фитнесс-центра Supergym">
-            Supergym
-          </a>
-          <!-- <nav class="footer__navigation"> -->
-          <a href="#" class="footer__navigation-link">Услуги</a>
-          <a href="#" class="footer__navigation-link">Абонементы</a>
-          <a href="#" class="footer__navigation-link">Акции</a>
-          <a href="#" class="footer__navigation-link">Тренеры</a>
-          <a href="#" class="footer__navigation-link">Расписание</a>
-          <!-- </nav> -->
-        </div>
-        <ul class="footer__list-social">
-          <li class="footer__item-social">
-            <a class="footer__social-link" href="#" aria-label="Supergym во Вконтакте">
-              <svg role="img" width="24" height="13">
-                <use xlink:href="#icon-vk"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__item-social">
-            <a class="footer__social-link" href="#" aria-label="Supergym в Инстаграмме">
-              <svg role="img" width="24" height="24">
-                <use xlink:href="#icon-insta"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="footer__item-social">
-            <a class="footer__social-link" href="#" aria-label="Supergym в Фейсбуке">
-              <svg role="img" width="12" height="24">
-                <use xlink:href="#icon-fb"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </footer>
-
   </main>
+
+  <!-- Футер -->
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__navigation">
+        <a href="#" class="footer__logo-link" aria-label="Логотип фитнесс-центра Supergym">
+          Supergym
+        </a>
+        <a href="#" class="footer__navigation-link">Услуги</a>
+        <a href="#" class="footer__navigation-link">Абонементы</a>
+        <a href="#" class="footer__navigation-link">Акции</a>
+        <a href="#" class="footer__navigation-link">Тренеры</a>
+        <a href="#" class="footer__navigation-link">Расписание</a>
+      </div>
+      <ul class="footer__list-social">
+        <li class="footer__item-social">
+          <a class="footer__social-link" href="#" aria-label="Supergym во Вконтакте">
+            <svg role="img" width="24" height="13">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item-social">
+          <a class="footer__social-link" href="#" aria-label="Supergym в Инстаграмме">
+            <svg role="img" width="24" height="24">
+              <use xlink:href="#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item-social">
+          <a class="footer__social-link" href="#" aria-label="Supergym в Фейсбуке">
+            <svg role="img" width="12" height="24">
+              <use xlink:href="#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
 </body>
 
 </html>

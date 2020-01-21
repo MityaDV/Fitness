@@ -2,12 +2,17 @@
 @import "vars.scss";
 
 .footer {
-  padding: 45px 0;
+  margin-top: auto;
+  padding: 39px 0;
 
   background-color: $color_green_dark;
 
+  @media (max-width: $width_viewport_tablet) {
+    padding: 42px 0;
+  }
+
   @media (max-width: $width_viewport_mobile) {
-    padding: 50px 0;
+    padding: 48px 0;
   }
 }
 
@@ -26,7 +31,6 @@
 
 .footer__logo-link {
   display: block;
-  // flex-basis: 8%;
   margin: 0 auto 0 0;
 
   font-weight: $font_weight_bold;
@@ -38,7 +42,6 @@
   letter-spacing: 0.02em;
 
   @media (max-width: $width_viewport_tablet) {
-    // margin: 0 0 0 0;
     font-size: $font_size_p_tablet_xxxxxxs;
   }
 
@@ -113,13 +116,7 @@
   display: flex;
   flex-basis: auto;
   flex-wrap: wrap;
-  // justify-content: center;
   min-width: 11%;
-  // margin: 0 0 0 auto;
-
-  // @media (max-width: $width_viewport_mobile) {
-  //   margin: 0;
-  // }
 }
 
 .footer__item-social {
