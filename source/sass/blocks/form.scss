@@ -4,16 +4,16 @@
 .form {
   width: 580px;
   margin: 0 0 0 auto;
-  padding: 63px 170px 70px 0;
+  padding: 66px 170px 97px 0;
 
   @media (max-width: $width_viewport_tablet) {
-    width: 590px;
+    width: 630px;
     max-width: 1160px;
     margin: 0 auto;
     padding: 70px 50px;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     width: 100%;
     margin: 0 auto;
     padding: 70px 15px;
@@ -51,7 +51,7 @@
 
   & input {
     margin: 0 0 30px;
-    padding: 9px;
+    padding: 9px 9px 9px 0;
 
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xs;
@@ -93,6 +93,8 @@
     }
 
     &[type="text"]::placeholder {
+      margin-left: -9px;
+
       font-weight: $font_weight_normal;
       font-size: $font_size_p_desktop_xs;
       line-height: $line_height_p_desktop_xs;
