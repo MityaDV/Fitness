@@ -73,7 +73,6 @@
 
   display: flex;
   flex-wrap: wrap;
-  // flex-basis: 42%;
 
   line-height: $line_height_p_desktop_xxl;
 
@@ -88,7 +87,7 @@
     left: 50%;
 
     width: 1px;
-    height: 132px;
+    height: calc(100% - 30px);
 
     background: $color_gray_light;
     transform: translate(-50%, 0);
@@ -101,34 +100,6 @@
       display: none;
     }
   }
-
-  // &:nth-of-type(2n+1) {
-  //   margin: 0 60px 0 0;
-
-  //   @media (max-width: $width_viewport_tablet) {
-  //     margin: 0 47px 0 0;
-  //   }
-
-  //   @media (max-width: $width_viewport_mobile) {
-  //     margin: 0 0 25px;
-  //   }
-  // }
-
-  // &:nth-of-type(2n+2) {
-  //   padding: 0 0 0 60px;
-
-  //   border-left: 1px solid $color_gray_light;
-
-  //   @media (max-width: $width_viewport_tablet) {
-  //     padding: 0 0 0 47px;
-  //   }
-
-  //   @media (max-width: $width_viewport_mobile) {
-  //     padding: 0;
-
-  //     border: none;
-  //   }
-  // }
 }
 
 .contact__item {
@@ -174,12 +145,7 @@
 
 .contact__address {
   font-style: normal;
-  // color: $color_blue_midnight;
 }
-
-// .contact__time {
-//   color: $color_blue_midnight;
-// }
 
 .contact__link-email {
   color: $color_blue_midnight;

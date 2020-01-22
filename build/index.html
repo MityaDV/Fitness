@@ -211,13 +211,13 @@
       <div class="trainer__inner">
         <h2>Тренеры</h2>
         <div class="trainer__content slider-trainer">
-          <button class="button-slider button-slider--prev" type="button" aria-label="кнопка предыдущий слайд">
+          <button class="button-slider button-slider--prev slider__control_left slider__control" type="button" aria-label="кнопка предыдущий слайд">
             <svg class="button-slider__icon" aria-hidden="true" role="presentation" focusable="false" width="16" height="32">
               <use xlink:href="#icon-arrow-prev"></use>
             </svg>
           </button>
-          <ul class="slider-trainer__list">
-            <li class="slider-trainer__item" tabindex="0">
+          <ul class="slider-trainer__list slider__wrapper">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
               <p>Анна Павлова</p>
               <div class="slider-trainer__card">
@@ -230,7 +230,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-lavrov-desktop@1x.jpg" alt="фото Алексей Лавров" width="260" height="294">
               <p>Алексей Лавров</p>
               <div class="slider-trainer__card">
@@ -243,7 +243,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pashkov-desktop@1x.jpg" alt="фото Александр Пашков" width="260" height="294">
               <p>Александр Пашков</p>
               <div class="slider-trainer__card">
@@ -256,7 +256,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-ketova-desktop@1x.jpg" alt="фото Мария Кетова" width="260" height="294">
               <p>Мария Кетова</p>
               <div class="slider-trainer__card">
@@ -269,7 +269,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
               <p>Анна Павлова</p>
               <div class="slider-trainer__card">
@@ -282,7 +282,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
               <p>Анна Павлова</p>
               <div class="slider-trainer__card">
@@ -295,7 +295,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
               <p>Анна Павлова</p>
               <div class="slider-trainer__card">
@@ -308,7 +308,7 @@
                 </ul>
               </div>
             </li>
-            <li class="slider-trainer__item" tabindex="0">
+            <li class="slider-trainer__item slider__item" tabindex="0">
               <img src="img/coach-pavlova-desktop@1x.jpg" alt="фото Анна Павлова" width="260" height="294">
               <p>Анна Павлова</p>
               <div class="slider-trainer__card">
@@ -322,7 +322,7 @@
               </div>
             </li>
           </ul>
-          <button class="button-slider button-slider--next" type="button" aria-label="кнопка следующий слайд">
+          <button class="button-slider button-slider--next slider__control_right slider__control" type="button" aria-label="кнопка следующий слайд">
             <svg class="button-slider__icon" aria-hidden="true" role="presentation" focusable="false" width="16" height="32">
               <use xlink:href="#icon-arrow-next"></use>
             </svg>
@@ -471,7 +471,7 @@
             <div class="form__group">
               <input type="text" id="user-name" name="username" placeholder="Имя" required="required">
               <label class="form__label" for="user-name"></label>
-              <input type="tel" id="user-phone" name="userphone" pattern="^[+]{1}[0-9]{1} [(]{1}[0-9]{3}[)]{1} [0-9]{3} [0-9]{2} [0-9]{2}$" placeholder="Телефон" required="" title="Формат телефона +7 (999) 999 99 99" minlength="18" maxlength="18">
+              <input type="tel" id="user-phone" name="userphone" pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3} [0-9]{2} [0-9]{2}" maxlength="18" placeholder="Телефон" required="">
               <label class="form__label" for="user-phone"></label>
             </div>
             <button class="form__button btn btn--send" type="submit">Отправить</button>
@@ -551,6 +551,9 @@
       </ul>
     </div>
   </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
 
 </body>
 
