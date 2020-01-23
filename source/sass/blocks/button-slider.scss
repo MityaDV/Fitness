@@ -24,12 +24,12 @@
 
 .button-slider {
   position: absolute;
-  top: 50%;
+  top: 60%;
 
   width: 30px;
   min-height: 40px;
 
-  background: transparent;
+  background-color: transparent;
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
@@ -44,6 +44,11 @@
 
   &--prev {
     left: -56px;
+
+    background-image: url("../img/icon-arrow-prev.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
 
     @media (max-width: 1270px) {
       left: -40px;
@@ -64,6 +69,11 @@
 
   &--next {
     right: -56px;
+
+    background-image: url("../img/icon-arrow-next.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
 
     @media (max-width: 1270px) {
       right: -40px;

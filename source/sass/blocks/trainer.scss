@@ -16,6 +16,8 @@
 .trainer__inner {
   @include inner;
 
+  position: relative;
+
   & h2 {
     @include heading_h2;
 

@@ -2,7 +2,7 @@
 @import "vars.scss";
 
 .slider-trainer {
-  position: relative;
+  overflow: hidden;
 
   @media (max-width: $width_viewport_tablet) {
     padding: 0 57px;
@@ -21,7 +21,6 @@
   @include list;
 
   display: flex;
-  overflow: hidden;
 
   transition: transform 0.6s ease;
 }
@@ -30,20 +29,15 @@
   position: relative;
 
   display: flex;
-  flex: 0 0 22.4%;
+  flex: 0 0 25%;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  // justify-content: flex-end;
   align-items: center;
-  max-width: 22.4%;
+  max-width: 25%;
   min-height: 294px;
-  margin: 0 40px 0 0;
 
   cursor: pointer;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
 
   @media (max-width: $width_viewport_tablet) {
     flex: 0 0 50%;
@@ -97,6 +91,8 @@
 .slider-trainer__card {
   position: absolute;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   z-index: 10;
 
@@ -104,9 +100,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  width: calc(100% - 30px);
   min-height: 294px;
-  padding: 53px 54px;
+  margin: 0 auto;
+  padding: 53px 52px;
 
   background-color: $color_blue_bali_hai;
 
