@@ -149,8 +149,26 @@
 
 .contact__link-email {
   color: $color_blue_midnight;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 }
 
 .contact__link-phone {
   color: $color_blue_midnight;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
 }

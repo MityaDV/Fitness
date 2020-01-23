@@ -8,6 +8,18 @@
     width: 10px;
     height: 19px;
   }
+
+  &:hover {
+    stroke: $color_blue_cornflower;
+    stroke-width: 4px;
+  }
+
+  &:focus {
+    outline: none;
+
+    stroke: $color_blue_cornflower;
+    stroke-width: 4px;
+  }
 }
 
 .button-slider {
@@ -20,6 +32,15 @@
   background: transparent;
   border: none;
   transform: translateY(-50%);
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
 
   &--prev {
     left: -56px;

@@ -235,6 +235,21 @@
   @media (max-width: $width_viewport_mobile) {
     align-self: auto;
   }
+
+  &:hover {
+    color: $color_blue_cornflower;
+
+    box-shadow: 0 1px 0 0 $color_blue_cornflower;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    color: $color_blue_cornflower;
+
+    outline: none;
+    box-shadow: 0 1px 0 0 $color_blue_cornflower;
+    opacity: 0.8;
+  }
 }
 
 .offer__list-extra {
@@ -344,5 +359,20 @@
 
   @media (max-width: $width_viewport_mobile) {
     align-self: auto;
+  }
+
+  &:hover {
+    color: $color_blue_cornflower;
+
+    box-shadow: 0 1px 0 0 $color_blue_cornflower;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    color: $color_blue_cornflower;
+
+    outline: none;
+    box-shadow: 0 1px 0 0 $color_blue_cornflower;
+    opacity: 0.8;
   }
 }

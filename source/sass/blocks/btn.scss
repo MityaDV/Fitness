@@ -80,6 +80,21 @@
     @media (max-width: $width_viewport_mobile) {
       width: 100%;
     }
+
+    &:hover {
+      color: $color_blue_cornflower;
+
+      border-color: $color_blue_cornflower;
+      opacity: 0.8;
+    }
+
+    &:focus {
+      color: $color_blue_cornflower;
+
+      border-color: $color_blue_cornflower;
+      outline: none;
+      opacity: 0.8;
+    }
   }
 
   &--send {
@@ -93,6 +108,15 @@
 
     @media (max-width: $width_viewport_tablet) {
       width: 100%;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 0.6;
     }
   }
 }
