@@ -43,41 +43,42 @@ var multiItemSlider = (function () {
     var sliderWrapper = mainElement.querySelector('.slider__wrapper'); // обертка для .slider-item
     var sliderItems = mainElement.querySelectorAll('.slider__item'); // элементы (.slider-item)
     var sliderControls = mainElement.querySelectorAll('.slider__control'); // элементы управления
-    // var sliderControlLeft = mainElement.querySelector('.slider__control_left'); // кнопка "LEFT"
-    // var sliderControlRight = mainElement.querySelector('.slider__control_right'); // кнопка "RIGHT"
     var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width); // ширина обёртки
     var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
     var positionLeftItem = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсофрмации .slider_wrapper
     var step = itemWidth / wrapperWidth * 100; // величина шага (для трансформации)
+    // var step = wrapperWidth; // величина шага (для трансформации)
     var items = []; // массив элементов
 
     // наполнение массива _items
-    sliderItems.forEach(function (item, index) {
+    for (var i = 0; i < sliderItems.length; i++) {
       items.push({
-        item: item,
-        position: index,
+        item: sliderItems[i],
+        position: i,
         transform: 0
       });
-    });
+    }
 
     var position = {
       getItemMin: function () {
         var indexItem = 0;
-        items.forEach(function (item, index) {
-          if (item.position < items[indexItem].position) {
-            indexItem = index;
+
+        for (var j = 0; j < items.length; j++) {
+          if (items[j].position < items[indexItem].position) {
+            indexItem = j;
           }
-        });
+        }
         return indexItem;
       },
       getItemMax: function () {
         var indexItem = 0;
-        items.forEach(function (item, index) {
-          if (item.position > items[indexItem].position) {
-            indexItem = index;
+
+        for (var j = 0; j < items.length; j++) {
+          if (items[j].position > items[indexItem].position) {
+            indexItem = j;
           }
-        });
+        }
         return indexItem;
       },
       getMin: function () {
@@ -119,14 +120,21 @@ var multiItemSlider = (function () {
         e.preventDefault();
         var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
         transformItem(direction);
+        transformItem(direction);
+        transformItem(direction);
+        transformItem(direction);
       }
     };
 
     var setUpListeners = function () {
       // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
-      sliderControls.forEach(function (item) {
-        item.addEventListener('click', controlClick);
-      });
+      for (var a = 0; a < sliderControls.length; a++) {
+        sliderControls[a].addEventListener('click', controlClick);
+      }
+
+      // sliderControls.forEach(function (item) {
+      //   item.addEventListener('click', controlClick);
+      // });
     };
 
     // инициализация

@@ -33,8 +33,6 @@
         } else {
           newLocal = a;
         }
-
-
         return newLocal;
       });
       if (event.type === 'blur') {
