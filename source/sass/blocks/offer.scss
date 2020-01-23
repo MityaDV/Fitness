@@ -52,8 +52,9 @@
   @include list;
 
   display: flex;
-  flex-basis: 48%;
+  flex-basis: auto;
   flex-wrap: wrap;
+  width: 48%;
   margin: 0 3.5% 40px 0;
 
   @media (max-width: $width_viewport_tablet) {
@@ -68,8 +69,9 @@
 
 .offer__item-year {
   display: flex;
-  flex-basis: 50%;
+  flex-basis: auto;
   flex-direction: column;
+  width: 50%;
 
   @media (max-width: $width_viewport_mobile) {
     flex-basis: auto;
@@ -256,8 +258,9 @@
   @include list;
 
   display: flex;
-  flex-basis: 48%;
+  flex-basis: auto;
   flex-wrap: wrap;
+  width: 48%;
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 100%;

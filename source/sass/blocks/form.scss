@@ -73,7 +73,8 @@
     }
 
     &[type="text"] {
-      flex-basis: 46%;
+      flex-basis: auto;
+      width: 46%;
       margin: 0 30px 30px 0;
 
       @media (max-width: $width_viewport_tablet) {
@@ -88,7 +89,8 @@
     }
 
     &[type="tel"] {
-      flex-basis: 46%;
+      flex-basis: auto;
+      width: 46%;
 
       @media (max-width: $width_viewport_tablet) {
         flex-basis: 43%;
@@ -97,6 +99,10 @@
       @media (max-width: $width_viewport_mobile) {
         flex-basis: 100%;
         margin: 0 0 30px;
+      }
+
+      &::-ms-clear {
+        display: none;
       }
     }
 

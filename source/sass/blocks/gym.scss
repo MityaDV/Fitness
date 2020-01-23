@@ -29,7 +29,8 @@
 }
 
 .gym__content {
-  flex-basis: 41%;
+  flex-basis: auto;
+  width: 41%;
   padding: 50px 60px 30px;
 
   @media (max-width: $width_viewport_tablet) {
@@ -110,8 +111,9 @@
 }
 
 .gym__image {
-  flex-basis: 57%;
-  width: 660px;
+  flex-basis: auto;
+  width: 57%;
+  max-width: 660px;
   margin: 0 0 auto auto;
 
   font-size: 0;
