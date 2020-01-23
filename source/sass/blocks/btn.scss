@@ -17,6 +17,7 @@
 
   background: transparent;
   border: 4px solid $color_white;
+  cursor: pointer;
 
   &--buy {
     @media (max-width: $width_viewport_tablet) {
@@ -25,6 +26,21 @@
 
     @media (max-width: $width_viewport_mobile) {
       width: 100%;
+    }
+
+    &:hover {
+      color: $color_white_50;
+
+      border-image: linear-gradient(45deg, #d10a42, #00359f);
+      border-image-slice: 1;
+    }
+
+    &:focus {
+      color: $color_white_50;
+
+      border-image: linear-gradient(45deg, #d10a42, #00359f);
+      border-image-slice: 1;
+      outline: none;
     }
   }
 

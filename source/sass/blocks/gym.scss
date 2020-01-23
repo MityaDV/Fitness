@@ -235,6 +235,15 @@
   border: none;
   cursor: pointer;
 
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:focus {
+    outline: none;
+    transform: scale(1.2);
+  }
+
   @media (max-width: $width_viewport_tablet) {
     width: 73px;
     height: 73px;

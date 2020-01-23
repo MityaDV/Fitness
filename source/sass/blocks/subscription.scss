@@ -60,9 +60,28 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  &::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+
+    width: calc(100% - 58px);
+    height: 2px;
+
+    background: rgba(47, 47, 47, 0.2);
+    transform: translate(2%, 0);
+  }
+}
+
+.subscription__item {
+  margin: 0 46px 0 0;
+  padding: 0 6px;
 }
 
 .subscription__button {
+  padding: 0;
+
   font-size: $font_size_p_desktop_xxxxs;
   line-height: $line_height_p_desktop_xxl;
   font-family: $font_family_base;
@@ -70,6 +89,7 @@
 
   background: transparent;
   border: none;
+  cursor: pointer;
 
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_p_tablet_xxxxs;
@@ -82,13 +102,14 @@
   &:hover {
     color: $color_blue_midnight;
 
-    border-bottom: 2px solid $color_red_razzmatazz;
+    box-shadow: 0 2px 0 0 $color_red_razzmatazz;
   }
 
   &:focus {
     color: $color_blue_midnight;
 
     outline: none;
+    box-shadow: 0 2px 0 0 $color_red_razzmatazz;
   }
 }
 
@@ -129,6 +150,7 @@
   padding: 68px;
 
   background-color: $color_white;
+  cursor: pointer;
 
   @media (max-width: $width_viewport_tablet) {
     width: 442px;
@@ -180,7 +202,10 @@
   }
 
   & p + p {
+    position: relative;
+
     margin: 0 0 64px;
+    padding-right: calc(100% - 185px);
 
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxl;
@@ -194,5 +219,53 @@
     @media (max-width: $width_viewport_mobile) {
       font-size: $font_size_p_mobile_l;
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 26px;
+      right: 0;
+
+      width: 30px;
+      height: 42px;
+
+      background: url("../img/ruble-subscription.svg") no-repeat center;
+    }
+  }
+
+  &:hover {
+    border: 7px solid transparent;
+    border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+    border-image-slice: 1;
+  }
+
+  &:focus {
+    border: 7px solid transparent;
+    border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+    border-image-slice: 1;
+    outline: none;
+  }
+
+  &:hover p + p {
+    padding-right: calc(100% - 170px);
+  }
+
+  &:focus p + p {
+    padding-right: calc(100% - 170px);
+  }
+
+  &:hover .subscription__card-link {
+    color: $color_white;
+
+    background: linear-gradient(135deg, $color_red_razzmatazz, $color_blue_smalt);
+    border: none;
+  }
+
+  &:focus .subscription__card-link {
+    color: $color_white;
+
+    background: linear-gradient(135deg, $color_red_razzmatazz, $color_blue_smalt);
+    border: none;
+    outline: none;
   }
 }
