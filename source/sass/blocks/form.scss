@@ -65,17 +65,20 @@
     border-radius: 0;
 
     &:hover {
-      opacity: 0.6;
+      box-shadow: 0 13px 20px -10px rgba(255, 255, 255, 0.1);
     }
 
     &:focus {
-      opacity: 0.6;
+      outline: none;
+      box-shadow: 0 13px 20px -10px rgba(255, 255, 255, 0.1);
     }
 
     &[type="text"] {
       flex-basis: auto;
       width: 46%;
       margin: 0 30px 30px 0;
+
+      color: $color_white;
 
       @media (max-width: $width_viewport_tablet) {
         flex-basis: 43%;

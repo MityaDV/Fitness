@@ -79,8 +79,8 @@
 }
 
 .subscription__item {
-  margin: 0 17px 0 0;
-  padding: 10px;
+  margin: 0 35px 0 0;
+  padding: 5px;
 
   @media (max-width: 490px) {
     margin: 0 auto 0 0;
@@ -92,6 +92,8 @@
 }
 
 .subscription__button {
+  position: relative;
+
   padding: 0;
 
   font-size: $font_size_p_desktop_xxxxs;
@@ -111,17 +113,35 @@
     font-size: $font_size_p_mobile_xxxs;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 2px;
+
+    background: $color_red_razzmatazz;
+  }
+
   &:hover {
     color: $color_blue_midnight;
-
-    box-shadow: 0 2px 0 0 $color_red_razzmatazz;
   }
 
   &:focus {
     color: $color_blue_midnight;
 
     outline: none;
-    box-shadow: 0 2px 0 0 $color_red_razzmatazz;
+  }
+
+  &:hover::after {
+    display: block;
+  }
+
+  &:focus::after {
+    display: block;
   }
 }
 
