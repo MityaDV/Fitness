@@ -86,6 +86,23 @@
     width: 100%;
   }
 
+  &:nth-child(odd) svg {
+    width: 108px;
+    height: 49px;
+
+    .gradient-layer {
+      fill: url("#gr-overlay");
+    }
+  }
+
+  &:nth-child(even) svg {
+    width: 60px;
+    height: 45px;
+
+    .gradient-layer {
+      fill: url("#gr-overlay");
+    }
+  }
 
   &::after {
     content: "";
@@ -248,11 +265,6 @@
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxxxl;
     line-height: $line_height_p_desktop_s;
-
-    background: linear-gradient(135deg, $color_red_razzmatazz, #0041ca);
-    background-clip: text;
-
-    -webkit-text-fill-color: transparent;
 
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_p_tablet_l;
