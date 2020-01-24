@@ -40,9 +40,9 @@ var multiItemSlider = (function () {
   return function (selector, counter) {
 
     var mainElement = document.querySelector(selector); // основный элемент блока
-    var sliderWrapper = mainElement.querySelector('.slider__wrapper'); // обертка для .slider-item
-    var sliderItems = mainElement.querySelectorAll('.slider__item'); // элементы (.slider-item)
-    var sliderControls = mainElement.querySelectorAll('.slider__control'); // элементы управления
+    var sliderWrapper = mainElement.querySelector('.slider-wrapper'); // обертка для .slider-item
+    var sliderItems = mainElement.querySelectorAll('.slider-item'); // элементы (.slider-item)
+    var sliderControls = mainElement.querySelectorAll('.slider-control'); // элементы управления
     var wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width); // ширина обёртки
     var itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width); // ширина одного элемента
     var positionLeftItem = 0; // позиция левого активного элемента
@@ -116,10 +116,10 @@ var multiItemSlider = (function () {
 
     // обработчик события click для кнопок "назад" и "вперед"
     var controlClick = function (e) {
-      if (e.target.classList.contains('slider__control')) {
+      if (e.target.classList.contains('slider-control')) {
         e.preventDefault();
         if (slideCounter) {
-          var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+          var direction = e.target.classList.contains('slider-control-right') ? 'right' : 'left';
           for (var b = 0; b < slideCounter; b++) {
             transformItem(direction);
           }
