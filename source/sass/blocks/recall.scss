@@ -140,6 +140,14 @@
       background-size: auto;
       border-radius: 50%;
 
+      @media (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+        background-color: $color_gray_leghten;
+        background-image: url("../img/recall-desktop@2x.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
       @media (max-width: $width_viewport_mobile) {
         width: 68px;
         height: 68px;

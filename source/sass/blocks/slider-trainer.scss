@@ -82,6 +82,10 @@
     display: none;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:hover .slider-trainer__card {
     display: flex;
   }
@@ -158,5 +162,9 @@
 
   & ul li:last-child {
     margin: 0;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

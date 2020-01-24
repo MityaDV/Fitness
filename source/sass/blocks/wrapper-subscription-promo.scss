@@ -8,12 +8,28 @@
   background-position: right bottom 50%, center;
   background-size: auto, auto;
 
+  @media (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-desktop@2x.png"), linear-gradient(180deg, $color_white_dark 55%, $color_white 55%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom 50%, center;
+    background-size: 321px, auto;
+  }
+
   @media (max-width: $width_viewport_tablet) {
     background-color: $color_white_dark;
     background-image: url("../img/bg-barbell-tablet@1x.png"), linear-gradient(180deg, $color_white_dark 81%, $color_white 81%);
     background-repeat: no-repeat, no-repeat;
     background-position: right bottom 17%, center;
     background-size: auto, auto;
+  }
+
+  @media (max-width: $width_viewport_tablet) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-tablet@2x.png"), linear-gradient(180deg, $color_white_dark 81%, $color_white 81%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom 17%, center;
+    background-size: 289px, auto;
   }
 
   @media (max-width: $width_viewport_mobile) {

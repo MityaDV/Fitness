@@ -132,12 +132,28 @@
     background-size: cover;
   }
 
+  @media (max-width: $width_viewport_tablet) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_gray_leghten;
+    background-image: url("../img/gym-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   @media (max-width: $width_viewport_mobile) {
     width: 320px;
     margin: 0 0 40px;
 
     background-color: $color_gray_leghten;
     background-image: url("../img/gym-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (max-width: $width_viewport_mobile) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_gray_leghten;
+    background-image: url("../img/gym-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -188,6 +204,14 @@
     background-size: cover, cover;
   }
 
+  @media (max-width: $width_viewport_tablet) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_blue_night;
+    background-image: url("../img/transparency-video-gym-tablet@1x.png"), url("../img/video-gym-tablet@2x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+
   @media (max-width: $width_viewport_mobile) {
     position: relative;
     bottom: 0;
@@ -196,6 +220,14 @@
 
     background-color: $color_blue_night;
     background-image: url("../img/transparency-video-gym-mobile@1x.png"), url("../img/video-gym-mobile@1x.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: center, center;
+    background-size: cover, cover;
+  }
+
+  @media (max-width: $width_viewport_mobile) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_blue_night;
+    background-image: url("../img/transparency-video-gym-mobile@1x.png"), url("../img/video-gym-mobile@2x.png");
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     background-size: cover, cover;
