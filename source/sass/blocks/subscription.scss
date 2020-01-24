@@ -61,12 +61,16 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media (max-width: 340px) {
+    width: 100%;
+  }
+
   &::after {
     content: "";
     bottom: 0;
     left: 0;
 
-    width: calc(100% - 58px);
+    width: calc(100% - 12px);
     height: 2px;
 
     background: rgba(47, 47, 47, 0.2);
@@ -75,8 +79,16 @@
 }
 
 .subscription__item {
-  margin: 0 46px 0 0;
-  padding: 0 6px;
+  margin: 0 17px 0 0;
+  padding: 10px;
+
+  @media (max-width: 490px) {
+    margin: 0 auto 0 0;
+  }
+
+  &:last-of-type {
+    margin: 0;
+  }
 }
 
 .subscription__button {
@@ -214,10 +226,17 @@
 
     @media (max-width: $width_viewport_tablet) {
       margin: 0 0 45px;
+      padding-right: calc(100% - 260px);
     }
 
     @media (max-width: $width_viewport_mobile) {
+      padding-right: calc(100% - 320px);
+
       font-size: $font_size_p_mobile_l;
+    }
+
+    @media (max-width: 490px) {
+      padding-right: 40px;
     }
 
     &::after {
@@ -230,28 +249,75 @@
       height: 42px;
 
       background: url("../img/ruble-subscription.svg") no-repeat center;
+
+      @media (max-width: $width_viewport_mobile) {
+        top: 20px;
+
+        width: 24px;
+        height: 33px;
+
+        background-size: cover;
+      }
     }
   }
 
   &:hover {
+    padding: 61px 54px;
+
     border: 7px solid transparent;
+    border-style: inset;
     border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
     border-image-slice: 1;
+
+    @media (max-width: $width_viewport_mobile) {
+      padding: 48px 42px;
+    }
   }
 
   &:focus {
+    padding: 61px 54px;
+
     border: 7px solid transparent;
+    border-style: inset;
     border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
     border-image-slice: 1;
     outline: none;
+
+    @media (max-width: $width_viewport_mobile) {
+      padding: 48px 42px;
+    }
   }
 
   &:hover p + p {
-    padding-right: calc(100% - 170px);
+    padding-right: calc(100% - 199px);
+
+    @media (max-width: $width_viewport_tablet) {
+      padding-right: calc(100% - 274px);
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      padding-right: calc(100% - 306px);
+    }
+
+    @media (max-width: 490px) {
+      padding-right: 40px;
+    }
   }
 
   &:focus p + p {
-    padding-right: calc(100% - 170px);
+    padding-right: calc(100% - 199px);
+
+    @media (max-width: $width_viewport_tablet) {
+      padding-right: calc(100% - 274px);
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      padding-right: calc(100% - 306px);
+    }
+
+    @media (max-width: 490px) {
+      padding-right: 40px;
+    }
   }
 
   &:hover .subscription__card-link {

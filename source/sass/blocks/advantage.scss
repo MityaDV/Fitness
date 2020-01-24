@@ -97,6 +97,10 @@
     height: 2px;
 
     background: $color_red_razzmatazz_20;
+
+    @media (max-width: $width_viewport_tablet) {
+      display: none;
+    }
   }
 
   &:nth-last-of-type(-n + 3):not(:nth-of-type(-n + 2)) {

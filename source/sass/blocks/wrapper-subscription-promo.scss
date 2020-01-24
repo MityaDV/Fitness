@@ -10,14 +10,17 @@
 
   @media (max-width: $width_viewport_tablet) {
     background-color: $color_white_dark;
-    background-image: url("../img/bg-barbell-tablet@1x.png"), linear-gradient(180deg, $color_white_dark 55%, $color_white 55%);
+    background-image: url("../img/bg-barbell-tablet@1x.png"), linear-gradient(180deg, $color_white_dark 81%, $color_white 81%);
     background-repeat: no-repeat, no-repeat;
-    background-position: right bottom 50%, center;
+    background-position: right bottom 17%, center;
     background-size: auto, auto;
   }
 
   @media (max-width: $width_viewport_mobile) {
     background-color: $color_white_dark;
-    background-image: none;
+    background-image: linear-gradient(180deg, $color_white_dark 70%, $color_white 70%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
   }
 }

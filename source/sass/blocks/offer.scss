@@ -59,6 +59,7 @@
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 100%;
+    width: 100%;
     margin: 0 0 30px;
   }
 
@@ -76,6 +77,7 @@
   @media (max-width: $width_viewport_mobile) {
     flex-basis: auto;
     align-items: center;
+    width: 100%;
   }
 
   & h3 {
@@ -264,6 +266,7 @@
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 100%;
+    width: 100%;
   }
 
   @media (max-width: $width_viewport_mobile) {

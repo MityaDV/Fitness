@@ -1,27 +1,6 @@
 @import "mixins.scss";
 @import "vars.scss";
 
-.button-slider__icon {
-  fill: none;
-
-  @media (max-width: 360px) {
-    width: 10px;
-    height: 19px;
-  }
-
-  &:hover {
-    stroke: $color_blue_cornflower;
-    stroke-width: 4px;
-  }
-
-  &:focus {
-    outline: none;
-
-    stroke: $color_blue_cornflower;
-    stroke-width: 4px;
-  }
-}
-
 .button-slider {
   position: absolute;
   top: 60%;
@@ -33,6 +12,11 @@
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
+
+  @media (max-width: 420px) {
+    width: 20px;
+    min-height: 20px;
+  }
 
   &:hover {
     opacity: 1;
@@ -59,11 +43,11 @@
     }
 
     @media (max-width: $width_viewport_tablet) {
-      left: 0;
+      left: 40px;
     }
 
-    @media (max-width: 360px) {
-      left: -6px;
+    @media (max-width: 420px) {
+      left: 13px;
     }
   }
 
@@ -84,11 +68,11 @@
     }
 
     @media (max-width: $width_viewport_tablet) {
-      right: 0;
+      right: 40px;
     }
 
-    @media (max-width: 360px) {
-      right: -6px;
+    @media (max-width: 420px) {
+      right: 13px;
     }
   }
 }
