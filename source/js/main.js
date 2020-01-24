@@ -12,7 +12,6 @@ if (sectionPrime) {
 }
 
 var sectionSubscription = bodyPage.querySelector('.subscription');
-// var sectionTrainer = bodyPage.querySelector('.trainer');
 
 // прокрутка к блоку абонементы
 
@@ -37,7 +36,8 @@ window.addEventListener('DOMContentLoaded', function () {
 // Код слайдера
 
 var multiItemSlider = (function () {
-  return function (selector) {
+
+  return function (selector, counter) {
 
     var mainElement = document.querySelector(selector); // основный элемент блока
     var sliderWrapper = mainElement.querySelector('.slider__wrapper'); // обертка для .slider-item
@@ -48,8 +48,8 @@ var multiItemSlider = (function () {
     var positionLeftItem = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсофрмации .slider_wrapper
     var step = itemWidth / wrapperWidth * 100; // величина шага (для трансформации)
-    // var step = wrapperWidth; // величина шага (для трансформации)
     var items = []; // массив элементов
+    var slideCounter = counter; // количество прокручиваемых слайдов
 
     // наполнение массива _items
     for (var i = 0; i < sliderItems.length; i++) {
@@ -118,28 +118,24 @@ var multiItemSlider = (function () {
     var controlClick = function (e) {
       if (e.target.classList.contains('slider__control')) {
         e.preventDefault();
-        var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
-        transformItem(direction);
-        transformItem(direction);
-        transformItem(direction);
-        transformItem(direction);
+        if (slideCounter) {
+          var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+          for (var b = 0; b < slideCounter; b++) {
+            transformItem(direction);
+          }
+        }
       }
     };
 
+    // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
     var setUpListeners = function () {
-      // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
       for (var a = 0; a < sliderControls.length; a++) {
         sliderControls[a].addEventListener('click', controlClick);
       }
-
-      // sliderControls.forEach(function (item) {
-      //   item.addEventListener('click', controlClick);
-      // });
     };
 
     // инициализация
     setUpListeners();
-
     return {
       right: function () { // метод right
         transformItem('right');
@@ -152,4 +148,5 @@ var multiItemSlider = (function () {
   };
 }());
 
-multiItemSlider('.trainer__content');
+multiItemSlider('#slider-trainer', 4);
+multiItemSlider('#slider-recall', 1);
