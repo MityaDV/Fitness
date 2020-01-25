@@ -128,29 +128,28 @@
 
   &--center {
     position: absolute;
-    top: -117px;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    left: calc(100% - 50%);
 
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    // flex-wrap: ;
     justify-content: center;
     align-items: center;
     width: 240px;
-    height: 307px;
-    margin: auto;
+    min-height: 307px;
     padding: 35px 33px;
 
-    background-color: $color_blue_midnight_light;
+    background-color: #1c3374;
+    transform: translate(-50%);
 
     @media (max-width: $width_viewport_tablet) {
-      top: -56px;
+      top: 0;
 
       flex-direction: row;
+      flex-wrap: wrap;
       width: 442px;
-      height: 239px;
+      min-height: 239px;
       padding: 35px 133px;
     }
 
@@ -158,11 +157,14 @@
       position: static;
 
       width: 100vw;
-      height: auto;
-      min-height: 239px;
+      // height: auto;
+      // min-height: 239px;
       margin: 0 0 50px;
+      // margin-left: 0;
       margin-left: calc(50% - 50vw);
       padding: 25px 50px 50px;
+
+      transform: none;
     }
 
     & p {

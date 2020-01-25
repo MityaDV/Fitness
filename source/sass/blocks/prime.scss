@@ -50,7 +50,7 @@
 .prime__row {
   display: flex;
   flex-basis: 100%;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 51%;
@@ -127,6 +127,11 @@
     min-width: 113px;
     margin: 0 -30px 0 0;
     padding: 90px 0 0;
+  }
+
+  @media (max-width: $width_viewport_tablet) {
+    margin: 0 -35px 0 0;
+    padding: 80px 0 0;
   }
 }
 
