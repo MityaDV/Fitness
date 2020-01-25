@@ -12,6 +12,8 @@ if (sectionPrime) {
 }
 
 var sectionSubscription = bodyPage.querySelector('.subscription');
+var numberSlideTrainer = 4; // количество прокручиваемых слайдов
+var numberSlideRecall = 1; // количество прокручиваемых слайдов
 
 // прокрутка к блоку абонементы
 
@@ -148,5 +150,5 @@ var multiItemSlider = (function () {
   };
 }());
 
-multiItemSlider('#slider-trainer', 4);
-multiItemSlider('#slider-recall', 1);
+multiItemSlider('#slider-trainer', numberSlideTrainer);
+multiItemSlider('#slider-recall', numberSlideRecall);
