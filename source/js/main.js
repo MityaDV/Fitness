@@ -196,8 +196,9 @@ var multiItemSlider = (function () {
           for (var b = 0; b < numberSlide; b++) {
             transformItem(direction);
           }
+        } else {
+          transformItem(direction);
         }
-        transformItem(direction);
       }
     };
 
