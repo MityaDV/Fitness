@@ -88,11 +88,11 @@ var multiItemSlider = (function () {
       });
     }
 
-    // проверяет текущую ширину окна браузера и записывает в массив это значение
+    // проверяет текущую ширину окна браузера и меняет в массиве states active на true
 
     var setActive = function () {
       var currentIndex = 0;
-      var width = parseFloat(document.body.clientWidth);
+      var width = parseFloat(document.body.clientWidth); // ширина области содержимого body + padding
       for (var c = 0; c < states.length; c++) {
         states[c].active = false;
         if (width >= states[c].minWidthMobile && width <= states[c].maxWidthMobile) {
@@ -189,13 +189,15 @@ var multiItemSlider = (function () {
     var controlClick = function (e) {
       if (e.target.classList.contains('slider-control')) {
         e.preventDefault();
-        var numberSlide = setActive();
-        if (numberSlide) {
-          var direction = e.target.classList.contains('slider-control-right') ? 'right' : 'left';
+        var direction = e.target.classList.contains('slider-control-right') ? 'right' : 'left';
+
+        if (wrapperWidth !== itemWidth) {
+          var numberSlide = setActive();
           for (var b = 0; b < numberSlide; b++) {
             transformItem(direction);
           }
         }
+        transformItem(direction);
       }
     };
 
