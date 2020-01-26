@@ -12,8 +12,6 @@ if (sectionPrime) {
 }
 
 var sectionSubscription = bodyPage.querySelector('.subscription');
-var numberSlideTrainer = 4; // количество прокручиваемых слайдов
-var numberSlideRecall = 1; // количество прокручиваемых слайдов
 
 // прокрутка к блоку абонементы
 
@@ -39,21 +37,49 @@ window.addEventListener('DOMContentLoaded', function () {
 
 var multiItemSlider = (function () {
 
-  return function (selector, counter) {
+  // получаем все нужные координаты
+
+  var isElementVisible = function (element) {
+    var rect = element.getBoundingClientRect();
+    var vWidth = window.innerWidth || document.documentElement.clientWidth;
+    var vHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    var elemFromPoint = function (x, y) {
+      return document.elementFromPoint(x, y);
+    };
+
+    if (rect.right < 0 || rect.bottom < 0 ||
+      rect.left > vWidth || rect.top > vHeight) {
+      return false;
+    }
+    return (
+      element.contains(elemFromPoint(rect.left, rect.top)) ||
+      element.contains(elemFromPoint(rect.right, rect.top)) ||
+      element.contains(elemFromPoint(rect.right, rect.bottom)) ||
+      element.contains(elemFromPoint(rect.left, rect.bottom))
+    );
+  };
+
+  return function (selector) {
 
     var mainElement = document.querySelector(selector); // основный элемент блока
     var sliderWrapper = mainElement.querySelector('.slider-wrapper'); // обертка для .slider-item
     var sliderItems = mainElement.querySelectorAll('.slider-item'); // элементы (.slider-item)
-    var sliderControls = mainElement.querySelectorAll('.slider-control'); // элементы управления
     var wrapperWidth = parseFloat(sliderWrapper.clientWidth); // ширина обёртки
     var itemWidth = parseFloat(sliderItems[0].clientWidth); // ширина одного элемента
     var positionLeftItem = 0; // позиция левого активного элемента
     var transform = 0; // значение транфсофрмации .slider_wrapper
     var step = itemWidth / wrapperWidth * 100; // величина шага (для трансформации)
     var items = []; // массив элементов
-    var slideCounter = counter; // количество прокручиваемых слайдов
+    var html = mainElement.innerHTML;
+    var states = [
+      {active: false, minWidthMobile: 320, maxWidthMobile: 767, count: 1},
+      {active: false, minWidthTablet: 768, maxWidthTablet: 1199, count: 2},
+      {active: false, minWidthDesktop: 1200, count: 4},
+    ];
 
     // наполнение массива _items
+
     for (var i = 0; i < sliderItems.length; i++) {
       items.push({
         item: sliderItems[i],
@@ -61,6 +87,41 @@ var multiItemSlider = (function () {
         transform: 0
       });
     }
+
+    // проверяет текущую ширину окна браузера и записывает в массив это значение
+
+    var setActive = function () {
+      var currentIndex = 0;
+      var width = parseFloat(document.body.clientWidth);
+      for (var c = 0; c < states.length; c++) {
+        states[c].active = false;
+        if (width >= states[c].minWidthMobile && width <= states[c].maxWidthMobile) {
+          currentIndex = c;
+        } else if (width >= states[c].minWidthTablet && width <= states[c].maxWidthTablet) {
+          currentIndex = c;
+        } else if (width >= states[c].minWidthDesktop) {
+          currentIndex = c;
+        }
+      }
+
+      states[currentIndex].active = true;
+      return states[currentIndex].count;
+    };
+
+    // получает текущую ширину браузера
+
+    var getActive = function () {
+      var currentIndex;
+      for (var d = 0; d < states.length; d++) {
+        if (states[d].active) {
+          currentIndex = d;
+        }
+      }
+
+      return currentIndex;
+    };
+
+    // проверка позиции минимального и максимального элемента
 
     var position = {
       getItemMin: function () {
@@ -91,8 +152,15 @@ var multiItemSlider = (function () {
       }
     };
 
+    // основная функция слайдера
+
     var transformItem = function (direction) {
       var nextItem;
+
+      if (!isElementVisible(mainElement)) {
+        return;
+      }
+
       if (direction === 'right') {
         positionLeftItem++;
         if ((positionLeftItem + wrapperWidth / itemWidth - 1) > position.getMax()) {
@@ -117,27 +185,73 @@ var multiItemSlider = (function () {
     };
 
     // обработчик события click для кнопок "назад" и "вперед"
+
     var controlClick = function (e) {
       if (e.target.classList.contains('slider-control')) {
         e.preventDefault();
-        if (slideCounter) {
+        var numberSlide = setActive();
+        if (numberSlide) {
           var direction = e.target.classList.contains('slider-control-right') ? 'right' : 'left';
-          for (var b = 0; b < slideCounter; b++) {
+          for (var b = 0; b < numberSlide; b++) {
             transformItem(direction);
           }
         }
       }
     };
 
-    // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
-    var setUpListeners = function () {
-      for (var a = 0; a < sliderControls.length; a++) {
-        sliderControls[a].addEventListener('click', controlClick);
+    // обновляем объкты при изменение размера окна
+
+    var refresh = function () {
+      mainElement.innerHTML = html;
+      sliderWrapper = mainElement.querySelector('.slider-wrapper');
+      sliderItems = mainElement.querySelectorAll('.slider-item');
+      wrapperWidth = parseFloat(sliderWrapper.clientWidth);
+      itemWidth = parseFloat(sliderItems[0].clientWidth);
+      positionLeftItem = 0;
+      transform = 0;
+      step = itemWidth / wrapperWidth * 100;
+      items = [];
+      for (var f = 0; f < sliderItems.length; f++) {
+        items.push({
+          item: sliderItems[f],
+          position: f,
+          transform: 0
+        });
       }
     };
 
+    // добавление к кнопкам "назад" и "вперед" обрботчика controlClick для событя click
+
+    var setUpListeners = function () {
+      mainElement.addEventListener('click', controlClick);
+      window.addEventListener('resize', function () {
+        var currentIndex = 0;
+        var width = parseFloat(document.body.clientWidth);
+
+        for (var c = 0; c < states.length; c++) {
+          states[c].active = false;
+          if (width >= states[c].minWidthMobile && width <= states[c].maxWidthMobile) {
+            currentIndex = c;
+          } else if (width >= states[c].minWidthTablet && width <= states[c].maxWidthTablet) {
+            currentIndex = c;
+          } else if (width >= states[c].minWidthDesktop) {
+            currentIndex = c;
+          }
+        }
+
+        // проверка ширины окна браузера
+
+        if (currentIndex !== getActive()) {
+          setActive();
+          refresh();
+        }
+      });
+    };
+
     // инициализация
+
     setUpListeners();
+    setActive();
     return {
       right: function () { // метод right
         transformItem('right');
@@ -150,5 +264,5 @@ var multiItemSlider = (function () {
   };
 }());
 
-multiItemSlider('#slider-trainer', numberSlideTrainer);
-multiItemSlider('#slider-recall', numberSlideRecall);
+multiItemSlider('#slider-trainer');
+multiItemSlider('#slider-recall');
