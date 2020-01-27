@@ -28,7 +28,7 @@
 
 .contact__column {
   width: 580px;
-  padding: 66px 0 66px 120px;
+  padding: 66px 0 47px 120px;
 
   @media (max-width: $width_viewport_tablet) {
     width: 630px;
@@ -47,7 +47,7 @@
     @include heading_h2;
 
     flex-basis: 100%;
-    margin: 0 0 46px;
+    margin: 0 0 42px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -106,7 +106,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 180px;
-  margin: 0 0 30px;
+  margin: 0 0 17px;
 
   font-size: $font_size_p_desktop_xs;
 
@@ -118,7 +118,7 @@
 
   & span {
     flex-basis: 100%;
-    margin: 0 0 7px;
+    margin: 0 0 4px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxs;
@@ -128,6 +128,10 @@
 
       font-size: $font_size_p_tablet_xxxxxs;
     }
+  }
+
+  & p {
+    margin: 0;
   }
 
   &:nth-of-type(2n) {

@@ -2,7 +2,7 @@
 @import "vars.scss";
 
 .gym {
-  padding: 120px 0 210px;
+  padding: 119px 0 210px;
 
   @media (max-width: $width_viewport_tablet) {
     padding: 100px 0 180px;
@@ -53,7 +53,7 @@
   & h2 {
     @include heading_h2;
 
-    margin: 0 0 20px;
+    margin: 0 0 6px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -74,7 +74,7 @@
   & p {
     @include indent_p;
 
-    margin: 0 0 30px;
+    margin: 0 0 39px;
 
     font-size: $font_size_p_desktop_xxxs;
     line-height: $line_height_p_desktop_xxl;
@@ -86,7 +86,7 @@
   }
 
   & p + p {
-    margin: 0 0 13px;
+    margin: 0 0 7px;
 
     font-weight: $font_weight_light;
     font-size: $font_size_p_desktop_xxs;
@@ -181,8 +181,8 @@
 .gym__video-wrapper {
   position: absolute;
   right: 0;
-  bottom: -92px;
-  left: 100px;
+  bottom: -110px;
+  left: 78px;
 
   width: 364px;
   max-height: 228px;

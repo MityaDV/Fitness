@@ -2,7 +2,7 @@
 @import "vars.scss";
 
 .recall {
-  padding: 60px 0 120px;
+  padding: 58px 0 120px;
 
   @media (max-width: $width_viewport_tablet) {
     padding: 50px 0 100px;
@@ -21,7 +21,7 @@
   & h2 {
     @include heading_h2;
 
-    margin: 0 0 62px;
+    margin: 0 0 52px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -83,6 +83,7 @@
 .recall__item {
   flex: 0 0 100%;
   max-width: 100%;
+  min-height: 242px;
   padding: 52px 62px;
 
   background-color: $color_blue_midnight_light;
@@ -99,7 +100,7 @@
 
     position: relative;
 
-    margin: 0 0 24px;
+    margin: 0 0 13px;
     padding: 0 0 0 108px;
 
     font-weight: $font_weight_bold;
@@ -127,7 +128,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 11px;
       left: 0;
 
       width: 80px;
@@ -180,7 +181,7 @@
 
 .recall__button {
   position: absolute;
-  top: 60%;
+  top: 65%;
 
   width: 30px;
   min-height: 40px;
@@ -204,7 +205,7 @@
   }
 
   &--prev {
-    left: 18%;
+    left: 20%;
 
     background-image: url("../img/icon-arrow-prev.svg");
     background-repeat: no-repeat;
@@ -233,7 +234,7 @@
   }
 
   &--next {
-    right: 18%;
+    right: 20%;
 
     background-image: url("../img/icon-arrow-next.svg");
     background-repeat: no-repeat;

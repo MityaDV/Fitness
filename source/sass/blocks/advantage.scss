@@ -21,7 +21,7 @@
   & h2 {
     @include heading_h2;
 
-    margin: 0 0 80px;
+    margin: 0 0 68px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -72,9 +72,9 @@
   position: relative;
 
   display: flex;
-  align-items: center;
+  // align-items: center;
   width: 340px;
-  margin: 0 0 120px;
+  margin: 0 0 118px;
 
   @media (max-width: $width_viewport_tablet) {
     width: 320px;
@@ -94,12 +94,12 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     width: 240px;
     min-height: 307px;
     margin: 0;
-    padding: 35px 33px;
+    padding: 50px 33px;
 
     background-color: #1c3374;
     transform: translate(-50%);
@@ -128,11 +128,11 @@
     & p {
       @include indent_p;
 
-      margin: 0;
+      margin: 0 0 5px;
 
       font-weight: $font_weight_bold;
       font-size: $font_size_p_desktop_xxxxxl;
-      line-height: $line_height_p_desktop_xxl;
+      line-height: $line_height_p_desktop_s;
       color: $color_white;
 
       @media (max-width: $width_viewport_tablet) {
@@ -147,7 +147,7 @@
     & h3 {
       @include heading_h3;
 
-      margin: 0 0 39px;
+      margin: 0 0 32px;
 
       font-weight: $font_weight_bold;
       font-size: $font_size_h3_desktop_l;
@@ -206,6 +206,10 @@
     }
   }
 
+  &:nth-of-type(2n) {
+    padding-left: 26px;
+  }
+
   &:nth-child(n+2):nth-child(-n+3) {
     @media (max-width: $width_viewport_mobile) {
       order: -1;
@@ -214,7 +218,7 @@
 
   &:nth-child(even) svg {
     width: 108px;
-    height: 49px;
+    height: 59px;
 
     .gradient-layer {
       fill: url("#gr-overlay");

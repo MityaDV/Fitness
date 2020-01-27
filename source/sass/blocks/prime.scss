@@ -2,7 +2,7 @@
 @import "vars.scss";
 
 .prime {
-  padding: 90px 0;
+  padding: 77px 0 79px;
 
   @media (max-width: $width_viewport_tablet) {
     padding: 40px 0 96px;
@@ -21,7 +21,7 @@
     display: flex;
     flex-basis: 34%;
     justify-content: flex-end;
-    margin: 0;
+    margin: 0 0 9px;
 
     font-size: $font_size_p_desktop_xl;
     line-height: $line_height_p_desktop_xxxs;
@@ -50,7 +50,6 @@
 .prime__row {
   display: flex;
   flex-basis: 100%;
-  // flex-wrap: wrap;
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 51%;
@@ -66,7 +65,7 @@
   }
 
   &--middle {
-    margin: 0 0 70px 0;
+    margin: 0 0 32px;
 
     @media (max-width: $width_viewport_tablet) {
       margin: 0 0 60px 0;
@@ -75,7 +74,8 @@
 
   &--buttom {
     justify-content: space-between;
-    padding: 0 0 0 170px;
+    align-items: flex-end;
+    padding: 0 0 0 165px;
 
     @media (max-width: $width_viewport_tablet) {
       justify-content: flex-end;
@@ -115,8 +115,8 @@
   flex-basis: 11%;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0 -30px 0 0;
-  padding: 120px 0 0;
+  margin: 0 -33px 0 0;
+  padding: 125px 0 0;
 
   font-size: $font_size_p_desktop_xs;
   line-height: $line_height_p_desktop_xxl;
@@ -143,8 +143,12 @@
   }
 }
 
+.prime__item-social {
+  margin: 0 0 10px;
+}
+
 .prime__link-social {
-  font-size: $font_size_p_desktop_xs;
+  font-size: $font_size_p_desktop_s;
   line-height: $line_height_p_desktop_xxs;
   color: $color_white;
   text-transform: uppercase;

@@ -5,7 +5,7 @@
   display: block;
   width: 230px;
   min-height: 57px;
-  padding: 10px;
+  padding: 5px;
 
   font-weight: bold;
   font-size: $font_size_p_desktop_s;
@@ -20,6 +20,10 @@
   cursor: pointer;
 
   &--buy {
+    width: 232px;
+    min-height: 61px;
+    margin: 0 0 15px;
+
     @media (max-width: $width_viewport_tablet) {
       width: 183px;
     }
@@ -66,7 +70,7 @@
     justify-content: center;
     align-items: center;
     width: 343px;
-    min-height: 67px;
+    min-height: 70px;
 
     @media (max-width: $width_viewport_tablet) {
       width: 202px;
@@ -100,7 +104,7 @@
 
   &--send {
     width: 410px;
-    min-height: 52px;
+    min-height: 54px;
 
     font-size: $font_size_p_desktop_xs;
     line-height: $line_height_p_desktop_xs;

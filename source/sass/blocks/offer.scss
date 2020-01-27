@@ -27,7 +27,7 @@
     @include heading_h2;
 
     flex-basis: 100%;
-    margin: 0 0 60px;
+    margin: 0 0 51px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -55,7 +55,7 @@
   flex-basis: auto;
   flex-wrap: wrap;
   width: 48%;
-  margin: 0 3.5% 40px 0;
+  margin: 0 3.6% 40px 0;
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 100%;
@@ -99,7 +99,7 @@
   & p {
     @include indent_p;
 
-    margin: 0 0 30px;
+    margin: 0 0 15px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxxl;
@@ -113,7 +113,7 @@
   }
 
   & p + p {
-    margin: 0 0 168px;
+    margin: 0 0 190px;
 
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xxxs;
@@ -132,7 +132,7 @@
   }
 
   &--color {
-    padding: 37px 44px 45px;
+    padding: 32px 44px 45px;
 
     background-color: $color_red_torch;
 
@@ -314,7 +314,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 0 40px;
-  padding: 31px;
+  padding: 24px 31px 31px;
 
   border: 7px solid transparent;
   border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
@@ -332,7 +332,7 @@
   & h3 {
     @include heading_h3;
 
-    margin: 0 0 17px;
+    margin: 0 0 10px;
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_l;
@@ -348,7 +348,7 @@
   & p {
     @include indent_p;
 
-    margin: 0 0 54px;
+    margin: 0 0 68px;
 
     font-size: $font_size_p_desktop_xxs;
     line-height: $line_height_p_desktop_l;

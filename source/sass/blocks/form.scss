@@ -4,7 +4,7 @@
 .form {
   width: 580px;
   margin: 0 0 0 auto;
-  padding: 66px 170px 97px 0;
+  padding: 60px 170px 69px 0;
 
   @media (max-width: $width_viewport_tablet) {
     width: 630px;
@@ -22,7 +22,7 @@
   & h2 {
     @include heading_h2;
 
-    margin: 0 0 50px;
+    margin: 0 0 30px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_l;
@@ -50,7 +50,7 @@
   }
 
   & input {
-    margin: 0 0 30px;
+    margin: 0 0 27px;
     padding: 9px 9px 9px 0;
 
     font-weight: $font_weight_normal;
@@ -76,7 +76,7 @@
     &[type="text"] {
       flex-basis: auto;
       width: 46%;
-      margin: 0 30px 30px 0;
+      margin: 0 30px 27px 0;
 
       color: $color_white;
 
