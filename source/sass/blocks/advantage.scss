@@ -21,7 +21,7 @@
   & h2 {
     @include heading_h2;
 
-    margin: 0 0 68px;
+    margin: 0 0 58px;
 
     font-size: $font_size_h2_desktop_s;
     line-height: $line_height_h2_desktop_s;
@@ -73,7 +73,7 @@
 
   display: flex;
   width: 340px;
-  margin: 0 0 118px;
+  margin: 0 0 150px;
 
   @media (max-width: $width_viewport_tablet) {
     width: 320px;
@@ -89,7 +89,7 @@
 
   &--center {
     position: absolute;
-    top: 0;
+    top: 11px;
     left: calc(100% - 50%);
 
     display: flex;
@@ -181,7 +181,7 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -60px;
+      bottom: -80px;
       left: 0;
 
       width: 100%;
@@ -208,7 +208,7 @@
   }
 
   &:nth-of-type(2n) {
-    padding-left: 26px;
+    padding-left: 24px;
 
     @media (max-width: $width_viewport_mobile) {
       padding-left: 0;
@@ -223,7 +223,7 @@
 
   &:nth-child(even) svg {
     width: 108px;
-    height: 59px;
+    height: 55px;
 
     .gradient-layer {
       fill: url("#gr-overlay");
@@ -231,8 +231,8 @@
   }
 
   &:nth-child(odd) svg {
-    width: 60px;
-    height: 45px;
+    width: 78px;
+    height: 55px;
 
     .gradient-layer {
       fill: url("#gr-overlay");
@@ -243,7 +243,7 @@
 .advantage__list {
   @include list;
 
-  margin: 0 30px 0 0;
+  margin: 0 25px 0 0;
 
   @media (max-width: $width_viewport_tablet) {
     flex-basis: auto;
@@ -260,6 +260,8 @@
 }
 
 .advantage__item {
+  line-height: 1;
+
   &--amount {
     font-weight: $font_weight_bold;
     font-size: $font_size_p_desktop_xxxxl;
@@ -272,7 +274,7 @@
 
   &--feature {
     font-size: $font_size_p_desktop_xs;
-    line-height: $line_height_p_desktop_xxl;
+    line-height: 1;
     color: $color_blue_cerulean;
 
     @media (max-width: $width_viewport_tablet) {
@@ -294,7 +296,7 @@
 
     font-weight: $font_weight_bold;
     font-size: $font_size_h3_desktop_xs;
-    line-height: $line_height_h3_desktop_xs;
+    line-height: $line_height_h3_desktop_xxs;
 
     @media (max-width: $width_viewport_tablet) {
       margin: 0 0 3px;
