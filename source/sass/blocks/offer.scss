@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 58px 0 5px;
+    padding: 71px 0 5px;
   }
 }
 
@@ -43,6 +43,8 @@
     }
 
     @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 43px;
+
       font-size: $font_size_h2_mobile_s;
     }
   }
