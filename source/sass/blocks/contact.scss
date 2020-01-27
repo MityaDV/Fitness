@@ -34,13 +34,13 @@
     width: 630px;
     max-width: 1160px;
     margin: 0 auto;
-    padding: 70px 50px 40px;
+    padding: 70px 32px 44px 64px;
   }
 
   @media (max-width: 640px) {
     width: 100%;
     margin: 0 auto;
-    padding: 70px 15px;
+    padding: 70px 15px 48px;
   }
 
   & h2 {
@@ -55,7 +55,7 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 45px;
+      margin: 0 0 33px;
 
       font-size: $font_size_h2_tablet_s;
     }
@@ -112,6 +112,7 @@
 
   @media (max-width: $width_viewport_tablet) {
     width: 220px;
+    margin: 0 0 20px;
 
     font-size: $font_size_p_tablet_xxxxs;
   }
@@ -124,8 +125,6 @@
     font-size: $font_size_p_desktop_xxs;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 10px;
-
       font-size: $font_size_p_tablet_xxxxxs;
     }
   }

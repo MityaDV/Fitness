@@ -5,7 +5,11 @@
   padding: 77px 0 79px;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 40px 0 96px;
+    padding: 48px 0 90px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    padding: 48px 0 64px;
   }
 }
 
@@ -14,6 +18,21 @@
 
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $width_viewport_tablet) {
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-end;
+    width: 50%;
+    margin: 0;
+    padding-right: 15px;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    align-items: stretch;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   & span {
     @include indent_p;
@@ -30,13 +49,15 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      flex-basis: 51%;
+      flex-basis: 48%;
+      margin: 0 0 3px;
 
       line-height: $line_height_p_tablet_xxxs;
     }
 
     @media (max-width: $width_viewport_mobile) {
       flex-basis: 70%;
+      margin: 0 0 7px;
 
       font-size: $font_size_p_mobile_xxxxxxxs;
     }
@@ -68,7 +89,11 @@
     margin: 0 0 32px;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 60px 0;
+      margin: 0 0 40px;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 45px;
     }
   }
 
@@ -84,7 +109,6 @@
 
     @media (max-width: $width_viewport_mobile) {
       flex-basis: 100%;
-      justify-content: normal;
     }
   }
 
@@ -125,11 +149,11 @@
   @media (max-width: $width_viewport_tablet) {
     flex-basis: 21%;
     min-width: 113px;
-    margin: 0 -30px 0 0;
-    padding: 90px 0 0;
+    margin: 0 -23px 0 0;
+    padding: 92px 0 0;
   }
 
-  @media (max-width: $width_viewport_tablet) {
+  @media (max-width: $width_viewport_mobile) {
     margin: 0 -35px 0 0;
     padding: 80px 0 0;
   }

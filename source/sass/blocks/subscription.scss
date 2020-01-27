@@ -5,7 +5,7 @@
   padding: 138px 0 50px;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 100px 0 65px;
+    padding: 100px 0 60px;
   }
 
   @media (max-width: $width_viewport_mobile) {
@@ -24,11 +24,11 @@
   margin: 0 0 43px;
 
   @media (max-width: $width_viewport_tablet) {
-    margin: 0 0 45px;
+    margin: 0 0 51px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    margin: 0 0 35px;
+    margin: 0 0 42px;
   }
 
   & h2 {
@@ -44,11 +44,13 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 26px;
+
       font-size: $font_size_h2_tablet_s;
     }
 
     @media (max-width: $width_viewport_mobile) {
-      margin: 0 0 30px;
+      margin: 0 0 15px;
 
       font-size: $font_size_h2_mobile_s;
     }
@@ -78,12 +80,20 @@
 
     background: rgba(47, 47, 47, 0.2);
     transform: translate(2%, 0);
+
+    @media (max-width: $width_viewport_mobile) {
+      bottom: -8px;
+    }
   }
 }
 
 .subscription__item {
   margin: 0 35px 0 0;
   padding: 6px;
+
+  @media (max-width: $width_viewport_tablet) {
+    margin: 0 43px 0 0;
+  }
 
   @media (max-width: 490px) {
     margin: 0 auto 0 0;
@@ -127,6 +137,10 @@
     height: 2px;
 
     background: $color_red_razzmatazz;
+
+    @media (max-width: $width_viewport_mobile) {
+      bottom: -14px;
+    }
   }
 
   &:hover {
@@ -192,7 +206,8 @@
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 55px 42px;
+    min-height: auto;
+    padding: 52px 42px 55px 42px;
   }
 
   @media (max-width: 490px) {
@@ -209,7 +224,7 @@
     line-height: $line_height_h3_desktop_s;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 18px;
+      margin: 0 0 9px;
 
       font-size: $font_size_h3_tablet_l;
       line-height: $line_height_h3_tablet_s;
@@ -234,6 +249,10 @@
       font-size: $font_size_p_tablet_xxxs;
       line-height: $line_height_p_tablet_xxl;
     }
+
+    @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 55px;
+    }
   }
 
   & p + p {
@@ -248,11 +267,11 @@
     color: $color_blue_egyptian;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 45px;
       padding-right: calc(100% - 260px);
     }
 
     @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 32px;
       padding-right: calc(100% - 320px);
 
       font-size: $font_size_p_mobile_l;
@@ -293,7 +312,7 @@
     border-image-slice: 1;
 
     @media (max-width: $width_viewport_mobile) {
-      padding: 48px 42px;
+      padding: 45px 35px;
     }
   }
 
@@ -307,7 +326,7 @@
     outline: none;
 
     @media (max-width: $width_viewport_mobile) {
-      padding: 48px 42px;
+      padding: 45px 42px;
     }
   }
 

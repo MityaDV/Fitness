@@ -11,7 +11,7 @@
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 70px 0 20px;
+    padding: 49px 0 20px;
   }
 }
 
@@ -31,7 +31,7 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 55px;
+      margin: 0 0 43px;
 
       font-size: $font_size_h2_tablet_s;
     }
@@ -72,7 +72,6 @@
   position: relative;
 
   display: flex;
-  // align-items: center;
   width: 340px;
   margin: 0 0 118px;
 
@@ -85,6 +84,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: 0 0 39px;
   }
 
   &--center {
@@ -94,7 +94,6 @@
 
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     width: 240px;
     min-height: 307px;
@@ -105,10 +104,11 @@
     transform: translate(-50%);
 
     @media (max-width: $width_viewport_tablet) {
-      top: calc(100% - 80%);
+      top: calc(100% - 79%);
 
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
       width: 442px;
       min-height: 239px;
       padding: 35px 133px;
@@ -137,6 +137,7 @@
 
       @media (max-width: $width_viewport_tablet) {
         flex-basis: 100%;
+        margin: 0;
 
         font-size: $font_size_p_tablet_xxxl;
         line-height: $line_height_p_tablet_s;
@@ -208,6 +209,10 @@
 
   &:nth-of-type(2n) {
     padding-left: 26px;
+
+    @media (max-width: $width_viewport_mobile) {
+      padding-left: 0;
+    }
   }
 
   &:nth-child(n+2):nth-child(-n+3) {
@@ -292,6 +297,8 @@
     line-height: $line_height_h3_desktop_xs;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 3px;
+
       font-size: $font_size_h3_tablet_s;
       line-height: $line_height_h3_tablet_xs;
     }

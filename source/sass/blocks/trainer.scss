@@ -9,7 +9,7 @@
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 35px 0 70px;
+    padding: 25px 0 70px;
   }
 }
 
@@ -31,13 +31,16 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 50px;
+      margin: 0 0 41px;
+      padding: 0;
 
       font-size: $font_size_h2_tablet_s;
       text-align: center;
     }
 
     @media (max-width: $width_viewport_mobile) {
+      margin: 0 0 43px;
+
       font-size: $font_size_h2_mobile_s;
     }
   }

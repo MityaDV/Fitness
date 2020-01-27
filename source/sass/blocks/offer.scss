@@ -5,11 +5,11 @@
   padding: 120px 0 20px;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 100px 0 20px;
+    padding: 63px 0 20px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 70px 0 5px;
+    padding: 58px 0 5px;
   }
 }
 
@@ -37,7 +37,7 @@
     letter-spacing: 0.03em;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 50px;
+      margin: 0 0 43px;
 
       font-size: $font_size_h2_tablet_s;
     }
@@ -92,7 +92,7 @@
 
     @media (max-width: $width_viewport_tablet) {
       font-size: $font_size_p_tablet_xxxxxxxs;
-      line-height: $line_height_p_tablet_xxxxl;
+      line-height: 1.3;
     }
   }
 
@@ -107,8 +107,14 @@
     color: $color_white;
 
     @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 20px;
+
       font-size: $font_size_p_tablet_xxl;
       line-height: $line_height_p_tablet_s;
+    }
+
+    @media (max-width: $width_viewport_tablet) {
+      margin: 0 0 13px;
     }
   }
 
@@ -121,7 +127,6 @@
 
     @media (max-width: $width_viewport_tablet) {
       width: 190px;
-      margin: 0 0 170px;
     }
 
     @media (max-width: $width_viewport_mobile) {
@@ -138,11 +143,12 @@
 
     @media (max-width: $width_viewport_tablet) {
       flex-basis: 41%;
-      padding: 37px 45px 45px;
+      padding: 33px 41px 45px 49px;
     }
 
     @media (max-width: $width_viewport_mobile) {
       flex-basis: auto;
+      padding: 36px 41px 42px 43px;
     }
   }
 
@@ -327,6 +333,7 @@
 
   @media (max-width: $width_viewport_mobile) {
     align-items: center;
+    padding: 35px 31px 36px;
   }
 
   & h3 {
@@ -370,12 +377,16 @@
 
       & p {
         width: 155px;
-        margin: 0 0 33px;
+        margin: 0 0 47px;
       }
     }
 
     @media (max-width: $width_viewport_mobile) {
       margin: 0 0 30px 0;
+
+      & p {
+        margin: 0 0 28px;
+      }
     }
   }
 
