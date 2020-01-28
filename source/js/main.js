@@ -73,12 +73,12 @@ var multiItemSlider = (function () {
     var items = []; // массив элементов
     var html = mainElement.innerHTML;
     var states = [
-      {active: false, minWidthMobile: 320, maxWidthMobile: 767, count: 1},
-      {active: false, minWidthTablet: 768, maxWidthTablet: 1199, count: 2},
-      {active: false, minWidthDesktop: 1200, count: 4},
+      {active: false, minWidthMobile: 320, maxWidthMobile: 767, count: 1, typeDevice: 'mobile'},
+      {active: false, minWidthTablet: 768, maxWidthTablet: 1199, count: 2, typeDevice: 'tablet'},
+      {active: false, minWidthDesktop: 1200, count: 4, typeDevice: 'desktop'},
     ];
 
-    // наполнение массива _items
+    // наполнение массива items
 
     for (var i = 0; i < sliderItems.length; i++) {
       items.push({
@@ -105,7 +105,10 @@ var multiItemSlider = (function () {
       }
 
       states[currentIndex].active = true;
-      return states[currentIndex].count;
+      return {
+        count: states[currentIndex].count,
+        type: states[currentIndex].typeDevice
+      };
     };
 
     // получает текущую ширину браузера
@@ -193,7 +196,7 @@ var multiItemSlider = (function () {
 
         if (wrapperWidth !== itemWidth) {
           var numberSlide = setActive();
-          for (var b = 0; b < numberSlide; b++) {
+          for (var b = 0; b < numberSlide.count; b++) {
             transformItem(direction);
           }
         } else {

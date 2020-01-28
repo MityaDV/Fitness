@@ -33,6 +33,8 @@
   text-transform: uppercase;
   letter-spacing: 0.02em;
 
+  cursor: pointer;
+
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_p_tablet_xxxxxxs;
   }

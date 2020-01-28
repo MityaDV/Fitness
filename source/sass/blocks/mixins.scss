@@ -68,6 +68,7 @@
   font-size: $font_size_h3_desktop;
   line-height: $line_height_h3_desktop;
 
+
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_h3_tablet;
     line-height: $line_height_h3_tablet;
@@ -82,6 +83,7 @@
 @mixin indent_p() {
   font-size: $font_size_p_desktop;
   line-height: $line_height_p_desktop;
+
 
   @media (max-width: $width_viewport_tablet) {
     font-size: $font_size_p_tablet;
