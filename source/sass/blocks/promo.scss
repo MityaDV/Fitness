@@ -2,14 +2,14 @@
 @import "vars.scss";
 
 .promo {
-  padding: 156px 0 60px;
+  padding: 0 0 60px;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 100px 0 50px;
+    padding: 0 0 50px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 70px 0 18px;
+    padding: 0 0 18px;
   }
 }
 

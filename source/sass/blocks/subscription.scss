@@ -2,14 +2,52 @@
 @import "vars.scss";
 
 .subscription {
-  padding: 138px 0 50px;
+  padding: 138px 0 206px;
+
+  background-color: $color_white_dark;
+  background-image: url("../img/bg-barbell-desktop@1x.png"), linear-gradient(180deg, $color_white_dark 90%, $color_white 90%);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right bottom -6%, center;
+  background-size: auto, auto;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 100px 0 60px;
+    padding: 100px 0 160px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 70px 0 35px;
+    padding: 70px 0 105px;
+  }
+
+  @media (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-desktop@2x.png"), linear-gradient(180deg, $color_white_dark 90%, $color_white 90%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom -6%, center;
+    background-size: 287px, auto;
+  }
+
+  @media (max-width: $width_viewport_tablet) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-tablet@1x.png"), linear-gradient(180deg, $color_white_dark 95%, $color_white 95%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom -2%, center;
+    background-size: auto, auto;
+  }
+
+  @media (max-width: $width_viewport_tablet) and (min-resolution: $retina_dpi) and (min-resolution: $retina_dppx) {
+    background-color: $color_white_dark;
+    background-image: url("../img/bg-barbell-tablet@2x.png"), linear-gradient(180deg, $color_white_dark 95%, $color_white 95%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom -2%, center;
+    background-size: 347px, auto;
+  }
+
+  @media (max-width: $width_viewport_mobile) {
+    background-color: $color_white_dark;
+    background-image: linear-gradient(180deg, $color_white_dark 95%, $color_white 95%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
   }
 }
 
