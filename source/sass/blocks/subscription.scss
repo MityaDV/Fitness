@@ -418,20 +418,20 @@
     background-image: url("../img/subscription-desktop-5000.png"), url("../img/bg-subscription.png");
     background-repeat: no-repeat;
     background-position: center top 46%, center;
-    background-size: auto, auto;
+    background-size: auto, cover;
   }
 
   &:nth-child(n+2):nth-child(-n+2) {
     background-image: url("../img/subscription-desktop-1700.png"), url("../img/bg-subscription.png");
     background-repeat: no-repeat;
     background-position: center top 46%, center;
-    background-size: auto, auto;
+    background-size: auto, cover;
   }
 
   &:nth-child(n+3):nth-child(-n+3) {
     background-image: url("../img/subscription-desktop-2700.png"), url("../img/bg-subscription.png");
     background-repeat: no-repeat;
     background-position: center top 46%, center;
-    background-size: auto, auto;
+    background-size: auto, cover;
   }
 }
