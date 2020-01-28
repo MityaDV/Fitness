@@ -473,11 +473,13 @@
             <h2>Бесплатное занятие</h2>
             <div class="form__group">
               <input type="text" id="user-name" name="username" placeholder="Имя" required="required">
-              <label class="form__label" for="user-name"></label>
+              <label class="form__label visually-hidden" for="user-name">Поле для ввода Имени</label>
               <input type="tel" id="user-phone" name="userphone"
                 pattern="\+[0-9]{1} \([0-9]{3}\) [0-9]{3} [0-9]{2} [0-9]{2}" maxlength="18" placeholder="Телефон"
                 required>
-              <label class="form__label" for="user-phone"></label>
+              <label class="form__label visually-hidden" for="user-phone">Поле для ввода номера телефона в формате +7
+                (000)000 00
+                00</label>
             </div>
             <button class="form__button btn btn--send" type="submit">Отправить</button>
           </form>

@@ -231,6 +231,7 @@
   }
 
   & img {
+    max-width: 280px;
     height: 462px;
 
     @media (max-width: $width_viewport_tablet) {
