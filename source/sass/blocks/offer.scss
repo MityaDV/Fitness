@@ -326,7 +326,7 @@
   padding: 24px 31px 31px;
 
   border: 7px solid transparent;
-  border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+  border-image: linear-gradient(170deg, $color_red_razzmatazz 0%, $color_blue_smalt 100%);
   border-image-slice: 1;
 
   @media (max-width: $width_viewport_tablet) {

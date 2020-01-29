@@ -35,14 +35,14 @@
     &:hover {
       color: $color_white_50;
 
-      border-image: linear-gradient(45deg, #d10a42, #00359f);
+      border-image: linear-gradient(45deg, $color_red_razzmatazz 0%, $color_blue_smalt 100%);
       border-image-slice: 1;
     }
 
     &:focus {
       color: $color_white_50;
 
-      border-image: linear-gradient(45deg, #d10a42, #00359f);
+      border-image: linear-gradient(45deg, $color_red_razzmatazz 0%, $color_blue_smalt 100%);
       border-image-slice: 1;
       outline: none;
     }

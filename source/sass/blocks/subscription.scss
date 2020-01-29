@@ -345,7 +345,7 @@
 
     border: 7px solid transparent;
     border-style: inset;
-    border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+    border-image: linear-gradient(165deg, $color_red_razzmatazz 0%, $color_blue_smalt 100%);
     border-image-slice: 1;
 
     @media (max-width: $width_viewport_mobile) {
@@ -358,7 +358,7 @@
 
     border: 7px solid transparent;
     border-style: inset;
-    border-image: linear-gradient(170deg, $color_red_razzmatazz, $color_blue_smalt);
+    border-image: linear-gradient(165deg, $color_red_razzmatazz 0%, $color_blue_smalt 100%);
     border-image-slice: 1;
     outline: none;
 
@@ -402,14 +402,14 @@
   &:hover .subscription__card-link {
     color: $color_white;
 
-    background: linear-gradient(135deg, $color_red_razzmatazz, $color_blue_smalt);
+    background: linear-gradient(110deg, $color_red_torch 15%, #003eb7 100%);
     border: none;
   }
 
   &:focus .subscription__card-link {
     color: $color_white;
 
-    background: linear-gradient(135deg, $color_red_razzmatazz, $color_blue_smalt);
+    background: linear-gradient(110deg, $color_red_torch 15%, #003eb7 100%);
     border: none;
     outline: none;
   }
