@@ -8,11 +8,11 @@
   background-color: $color_green_dark;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 42px 0 42px;
+    padding: 42px 0 44px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 45px 0 48px;
+    padding: 45px 0 49px;
   }
 }
 
