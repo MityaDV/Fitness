@@ -85,8 +85,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: 6px;
+    left: 51%;
 
     width: 1px;
     height: calc(100% - 30px);
@@ -95,7 +95,9 @@
     transform: translate(-50%, 0);
 
     @media (max-width: $width_viewport_tablet) {
-      height: 160px;
+      left: 50%;
+
+      height: calc(100% - 34px);
     }
 
     @media (max-width: $width_viewport_mobile) {
