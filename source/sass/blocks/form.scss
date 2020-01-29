@@ -50,8 +50,8 @@
   }
 
   & input {
-    margin: 0 0 27px;
-    padding: 9px 9px 9px 0;
+    margin: 0 0 28px;
+    padding: 9px 9px 6px 0;
 
     font-weight: $font_weight_normal;
     font-size: $font_size_p_desktop_xs;
@@ -65,7 +65,11 @@
     border-radius: 0;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 0 24px;
+      padding: 9px 9px 5px 0;
+    }
+
+    @media (max-width: $width_viewport_mobile) {
+      padding: 9px 9px 7px 0;
     }
 
     &:hover {
@@ -80,19 +84,19 @@
     &[type="text"] {
       flex-basis: auto;
       width: 46%;
-      margin: 0 30px 27px 0;
+      margin-right: 30px;
 
       color: $color_white;
 
       @media (max-width: $width_viewport_tablet) {
         flex-basis: 43%;
         width: auto;
-        margin: 0 60px 24px 0;
+        margin-right: 60px;
       }
 
       @media (max-width: $width_viewport_mobile) {
         flex-basis: 100%;
-        margin: 0 0 26px;
+        margin-right: 0;
       }
     }
 
@@ -107,7 +111,7 @@
 
       @media (max-width: $width_viewport_mobile) {
         flex-basis: 100%;
-        margin: 0 0 37px;
+        margin: 0 0 39px;
       }
 
       &::-ms-clear {

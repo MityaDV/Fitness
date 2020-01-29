@@ -8,11 +8,11 @@
   background-color: $color_green_dark;
 
   @media (max-width: $width_viewport_tablet) {
-    padding: 42px 0;
+    padding: 42px 0 42px;
   }
 
   @media (max-width: $width_viewport_mobile) {
-    padding: 48px 0 44px;
+    padding: 45px 0 48px;
   }
 }
 
@@ -24,6 +24,7 @@
   display: block;
   width: 10%;
   margin: 0 21% 0 0;
+  padding: 4px 0 0;
 
   font-weight: $font_weight_bold;
   font-size: $font_size_p_desktop_xxxxxs;
@@ -34,6 +35,8 @@
   letter-spacing: 0.02em;
 
   @media (max-width: $width_viewport_tablet) {
+    padding: 4px 0 0 5px;
+
     font-size: $font_size_p_tablet_xxxxxxs;
   }
 
@@ -41,13 +44,15 @@
     margin-right: 14%;
   }
 
-  @media (max-width: 960px) {
-    margin-right: 10%;
+  @media (max-width: 860px) {
+    width: 13%;
+    margin-right: 8%;
   }
 
   @media (max-width: $width_viewport_mobile) {
     width: 27%;
     margin: 0 0 -21px;
+    padding: 4px 0 0;
 
     font-size: $font_size_p_mobile_xxxxxs;
   }
@@ -177,11 +182,11 @@
   display: flex;
   flex-basis: auto;
   flex-wrap: wrap;
+  align-items: center;
   min-width: 9%;
   margin: 0 0 0 auto;
 
   @media (max-width: $width_viewport_tablet) {
-    align-items: center;
     min-width: 15%;
   }
 
@@ -198,7 +203,7 @@
     margin: 0 25px 0 0;
 
     @media (max-width: $width_viewport_tablet) {
-      margin: 0 20px 0 0;
+      margin: 0 19px 0 0;
     }
 
     @media (max-width: $width_viewport_mobile) {
@@ -229,7 +234,8 @@
 }
 
 .footer__social-link {
-  display: inline-block;
+  display: flex;
+  align-items: center;
 
   &:hover {
     transform: scale(1.2);
