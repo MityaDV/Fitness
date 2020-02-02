@@ -1,3 +1,9 @@
+@import "vars";
+@import "normalize";
+@import "layout";
+@import "fonts";
+@import "typography";
+@import "mixins";
 @import "wrapper-header-prime";
 @import "header";
 @import "prime";
@@ -14,10 +20,3 @@
 @import "footer";
 @import "btn";
 @import "button-slider";
-//
-@import "normalize";
-@import "layout";
-@import "fonts";
-@import "typography";
-@import "vars";
-@import "mixins";
